@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section-padding {
+  @apply md:py-16 md:px-28 py-8 px-12;
+}
