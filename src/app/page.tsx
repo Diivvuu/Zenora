@@ -2,7 +2,9 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Preloader from "@/components/Preloader";
-// import Landing from "@/components/Landing";
+import LandingPage from "@/components/landing/page";
+import Lenis from "lenis";
+import About from "@/components/About/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,6 +13,14 @@ export default function Home() {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       new LocomotiveScroll(); // Initialize without assigning
+
+      const lenis = new Lenis();
+      function raf(time: any) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
 
       setTimeout(() => {
         setIsLoading(false);
@@ -25,8 +35,9 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      {/* <Landing /> */}
-      hi man
+      <LandingPage />
+      <About />
+      <div className="h-screen" />
     </main>
   );
 }
