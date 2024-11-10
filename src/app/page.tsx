@@ -1,5 +1,4 @@
 "use client";
-import HeaderComponent from "@/components/Header";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Preloader from "@/components/Preloader";
@@ -26,9 +25,7 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-
       <LandingPage />
-
     </main>
   );
 }
