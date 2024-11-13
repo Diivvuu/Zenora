@@ -15,7 +15,7 @@ export default function Home() {
       new LocomotiveScroll(); // Initialize without assigning
 
       const lenis = new Lenis();
-      function raf(time: any) {
+      function raf(time: number) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }
