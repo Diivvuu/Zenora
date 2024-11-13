@@ -5,6 +5,7 @@ import Preloader from "@/components/Preloader";
 import LandingPage from "@/components/landing/page";
 import Lenis from "lenis";
 import About from "@/components/About/page";
+import Services from "@/components/Services/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +38,7 @@ export default function Home() {
       </AnimatePresence>
       <LandingPage />
       <About />
-      <div className="h-screen" />
+      <Services />
     </main>
   );
 }
