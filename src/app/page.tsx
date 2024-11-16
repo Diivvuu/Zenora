@@ -6,6 +6,7 @@ import LandingPage from "@/components/landing/page";
 import Lenis from "lenis";
 import About from "@/components/About/page";
 import Services from "@/components/Services/page";
+import Footer from "@/components/Footer/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ export default function Home() {
       <LandingPage />
       <About />
       <Services />
+      <Footer/>
     </main>
   );
 }
