@@ -2,8 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary-50: #e0f7ff;
+  --color-primary-100: #cceeff;
+  --color-primary-200: #b3e6ff;
+  --color-primary-300: #99ddff;
+  --color-primary-400: #80d4ff;
+  --color-primary-500: #66ccff; /* Primary color */
+  --color-primary-600: #4dc3ff;
+  --color-primary-700: #33baff;
+  --color-primary-800: #1ab0ff;
+  --color-primary-900: #0099ff;
+  --color-primary-950: #008ae6;
+}
+
+html {
+  font-size: 10px; /* Changes root font size */
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full-screen height */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .section-padding {
   @apply md:py-16 md:px-28 py-8 px-12;
 }
 
-/* /mei lassan khaaata pkda gya */
+.gradient-1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Full coverage */
+  background-image: url("./../../public/images/hero-img.jpg"); /* Replace with the correct path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  filter: hue-rotate(0deg); /* Applies monochrome filter and hue rotation */
+  z-index: -1; /* Places the background behind content */
+}
+
+.gradient-1::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* Full coverage */
+  background-image: linear-gradient(
+    to top left,
+    var(--color-primary-100),
+    var(--color-primary-200),
+    var(--color-primary-300),
+    var(--color-primary-400)
+  );
+  /* background-image: url("../../public/images/hero-img.jpg"); */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  opacity: 80%;
+}

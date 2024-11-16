@@ -39,7 +39,7 @@ export default function Scene2() {
           onMouseLeave={() => {
             setIsActive(false);
           }}
-          className="text-[4.5vw] max-w-[90vw] text-center text-white z-50 p-20"
+          className="text-[4.5vw] max-w-[90vw] text-center text-white z-50 p-20 --font-lora"
         >
           The quick brown fox jumps over the lazy dog
         </h1>
