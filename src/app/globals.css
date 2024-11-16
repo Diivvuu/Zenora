@@ -20,18 +20,12 @@ html {
   font-size: 10px; /* Changes root font size */
 }
 
-.hero-section {
-  position: relative;
-  height: 100vh; /* Full-screen height */
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.section-padding {
+  @apply md:py-16 md:px-56 py-8 px-12;
 }
 
-.section-padding {
-  @apply md:py-16 md:px-28 py-8 px-12;
+.ok {
+  background-color: #312320;
 }
 
 .gradient-1::before {

@@ -28,21 +28,21 @@ export default function Scene2() {
   // }, []);
 
   return (
-    <div className="h-[200vh]">
+    <div className="h-[200vh] ok">
       {" "}
       {/* Adjusted height to allow scrolling */}
       <div className="h-[100vh] flex items-center justify-center">
-        <h1
+        <h2
           onMouseOver={() => {
             setIsActive(true);
           }}
           onMouseLeave={() => {
             setIsActive(false);
           }}
-          className="text-[4.5vw] max-w-[90vw] text-center text-white z-50 p-20 --font-lora"
+          className="lg:text-8xl md:text-6xl text-4xl font-playfair text-white semi-bold"
         >
-          The quick brown fox jumps over the lazy dog
-        </h1>
+          About ZENORA
+        </h2>
       </div>
       {/* <GradientCursor isActive={isActive} /> */}
     </div>

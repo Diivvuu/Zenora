@@ -34,10 +34,10 @@ export default {
         xl: ["1.25rem", "1.75rem"], // Extra large text
 
         // Medium Devices (e.g., Tablets)
-        "2xl": ["1.5rem", "2rem"],
-        "3xl": ["1.875rem", "2.25rem"],
-        "4xl": ["2.25rem", "2.5rem"],
-        "5xl": ["3rem", "3.5rem"], // Heading for hero sections
+        "2xl": ["2rem", "2.5rem"],
+        "3xl": ["3rem", "3.5rem"],
+        "4xl": ["4rem", "4.5rem"],
+        "5xl": ["5rem", "5rem"], // Heading for hero sections
         "6xl": ["6rem", "6.5rem"],
 
         // Large Devices (e.g., Laptops & Desktops)
@@ -49,8 +49,8 @@ export default {
         "custom-20": "20px",
       },
       fontFamily: {
-        lora: ["var(--font-lora)", "serif"], // Lora as primary with serif fallback
-        nunito: ["var(--font-nunito)", "sans-serif"], // Nunito as primary with sans-serif fallback
+        nunito: ["var(--font-nunito)", "sans-serif"], // Nunito as primary with sans-serif fallbackplayfair
+        playfair: ["var(--font-playfair)", "serif"], // Nunito as primary with sans-serif fallback
       },
     },
   },
