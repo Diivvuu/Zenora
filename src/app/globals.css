@@ -24,6 +24,10 @@ html {
   @apply md:py-16 md:px-56 py-8 px-12;
 }
 
+.section-padding-sm {
+  @apply md:py-4 md:px-56 py-8 px-12;
+}
+
 .ok {
   background-color: #312320;
 }
@@ -54,5 +58,5 @@ html {
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image repetition */
-  opacity: 80%;
+  opacity: 40%;
 }
