@@ -1,11 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import GradientCursor from "./GradientCursor";
-import { gsap } from "gsap"; // Importing GSAP
-
 export default function Scene2() {
-  const [isActive, setIsActive] = useState(false);
-
   // useEffect(() => {
   //   const handleScroll = () => {
   //     // Check if scrolled past 100vh
@@ -29,8 +23,6 @@ export default function Scene2() {
 
   return (
     <div className="h-[200vh] ok">
-      {" "}
-      {/* Adjusted height to allow scrolling */}
       <div className="h-[100vh] flex items-center justify-center">
         <h2
           onMouseOver={() => {
