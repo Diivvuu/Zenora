@@ -31,10 +31,16 @@ export default function Scene2() {
           onMouseLeave={() => {
             setIsActive(false);
           }}
-          className="lg:text-8xl md:text-6xl text-4xl font-playfair text-white semi-bold"
+          className="lg:text-8xl md:text-6xl text-4xl font-playfair text-white font-bold"
         >
           About ZENORA
         </h2>
+        <p className="lg:text-3xl md:text-6xl text-4xl font-nunito text-white  text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+          consequatur ut numquam dolor quam aperiam amet quasi, unde facere? Quo
+          fuga id commodi reprehenderit. Impedit fugit error illum adipisci
+          nobis?
+        </p>
       </div>
       {/* <GradientCursor isActive={isActive} /> */}
     </div>

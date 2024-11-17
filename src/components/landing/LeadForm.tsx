@@ -2,7 +2,7 @@ import React from "react";
 
 const LeadForm = () => {
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex items-center justify-center h-full section-padding">
       <div className="w-full max-w-md p-6 rounded-lg shadow-md rounded-custom-20">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           Welcome to Zenora

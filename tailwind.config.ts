@@ -41,8 +41,9 @@ export default {
         "6xl": ["6rem", "6.5rem"],
 
         // Large Devices (e.g., Laptops & Desktops)
-        "7xl": ["4.5rem", "4.5rem"],
-        "8xl": ["8rem", "8.5rem"], // Hero headings or banner text
+        "7xl": ["7rem", "7.5rem"],
+        "8xl": ["8rem", "8.5rem"],
+        "10xl": ["10rem", "10.5rem"], // Hero headings or banner text
       },
 
       borderRadius: {

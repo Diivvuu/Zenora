@@ -47,7 +47,11 @@ export default function HeaderComponent() {
 
   return (
     <>
-      <div ref={header} className={styles.header}>
+      <div
+        ref={header}
+        className={`${styles.header} section-padding-sm  relative z-11`}
+      >
+        <div className="bg-[var(--color-primary-50)] inset-0 absolute  "> </div>
         <div>
           <Image src="/logo_2.png" alt="logo" width={100} height={100} />
         </div>
@@ -62,19 +66,25 @@ export default function HeaderComponent() {
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <a>Work</a>
+              <a className="font-playfair lg:text-4xl md:text-2xl cursor-pointer">
+                Work
+              </a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a>About</a>
+              <a className="font-playfair lg:text-4xl md:text-2xl cursor-pointer">
+                About
+              </a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a>Contact</a>
+              <a className="font-playfair lg:text-4xl md:text-2x cursor-pointer">
+                Contact
+              </a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
