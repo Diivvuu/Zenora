@@ -40,7 +40,7 @@ export default function Home() {
       <LandingPage />
       <About />
       <Services />
-      <Footer/>
+      <Footer />
     </main>
   );
 }
