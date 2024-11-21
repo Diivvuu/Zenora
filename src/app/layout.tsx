@@ -1,6 +1,6 @@
 import HeaderComponent from "@/components/Header";
 import type { Metadata } from "next";
-import { Nunito, Playfair } from "next/font/google";
+import { Nunito, Poppins } from "next/font/google";
 // import Lora from "next/font/local";
 import "./globals.css";
 
@@ -10,10 +10,10 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-const playfair = Playfair({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-playfair",
+  weight: ["400", "700", "900"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${nunito.variable} ${playfair.variable} antialiased`}>
+      <body className={` ${nunito.variable} ${poppins.variable} antialiased`}>
         <HeaderComponent />
         {children}
       </body>

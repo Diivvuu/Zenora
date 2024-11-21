@@ -13,28 +13,32 @@ const LandingPage = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
   return (
     <>
-      <div className="h-screen relative overflow-hidden z-10 " ref={container}>
+      <div
+        className="h-screen relative overflow-hidden z-10 gradient-1 "
+        ref={container}
+      >
         <motion.div style={{ y }} className="">
-          <section className="flex flex-col md:h-[80vh] md:flex-row w-full h-auto mt-20">
-            <div className=" flex flex-col justify-center gap-y-4 h-[50vh] md:h-full w-full md:w-1/2 section-padding">
-              <h1 className="lg:text-10xl md:text-6xl text-4xl font-playfair text-text-primary semi-bold">
-                Welcome to <br></br>
-                <span className="font-semibold lora text-text-navy">
-                  Zenora
-                </span>
+          {/* Main Section */}
+          <section className="flex flex-col lg:flex-row w-full h-[80vh] mt-48">
+            {/* Left Container */}
+            <div className="flex flex-col justify-center gap-y-4 w-full lg:w-1/2 section-padding">
+              <h1 className="3xl:text-10xl 2xl:text-9xl xl:text-6xl lg:text-5xl text-4xl font-poppins font-bold text-text-teal">
+                Welcome to <br />
+                <span>Zenora</span>
               </h1>
-              <p className="lg:text-3xl md:text-2xl text-xl font-nunito">
+              <p className=" 2xl:text-4xl xl:text-3xl  lg:text-2xl  text-xl font-poppins text-text-white">
                 Transforming Illness into Wellness
               </p>
-              <Button>Heelo</Button>
+              <Button variant="ghost" size="sm">
+                Ghost
+              </Button>
             </div>
-            <div className=" flex items-center justify-center h-[50vh] md:h-full w-full md:w-1/2 relative">
-              <div className="h-screen absolute inset-0">
-                <div className="relative h-[100vh]">
-                  <div className="gradient-1 absolute inset-0"></div>
-                </div>
+
+            {/* Right Container */}
+            <div className="flex items-center justify-center md:h-full w-full lg:w-1/2 relative">
+              <div className="hero-bg h-[100vh]">
+                <LeadForm />
               </div>
-              <LeadForm />
             </div>
           </section>
         </motion.div>

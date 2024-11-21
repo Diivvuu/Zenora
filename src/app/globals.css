@@ -3,60 +3,67 @@
 @tailwind utilities;
 
 :root {
-  --color-primary-50: #e0f7ff;
-  --color-primary-100: #cceeff;
-  --color-primary-200: #b3e6ff;
-  --color-primary-300: #99ddff;
-  --color-primary-400: #80d4ff;
-  --color-primary-500: #66ccff; /* Primary color */
-  --color-primary-600: #4dc3ff;
-  --color-primary-700: #33baff;
-  --color-primary-800: #1ab0ff;
-  --color-primary-900: #0099ff;
-  --color-primary-950: #008ae6;
+  --color-primary-50: #e5f8f7;
+  --color-primary-100: #cceff0;
+  --color-primary-200: #99dfde;
+  --color-primary-300: #66cfcc;
+  --color-primary-400: #33bfb9;
+  --color-primary-500: #00afa7; /* Primary color */
+  --color-primary-600: #009d96;
+  --color-primary-700: #008a84;
+  --color-primary-800: #007872;
+  --color-primary-900: #005c56;
+  --color-primary-950: #003f3c;
 }
-
 html {
   font-size: 10px; /* Changes root font size */
 }
 
 .section-padding {
-  @apply md:py-16 md:px-56 py-8 px-12;
+  @apply 2xl:py-16 2xl:px-56 md:py-12 md:px-40  py-8 px-12;
 }
 
 .section-padding-sm {
-  @apply md:py-4 md:px-56 py-8 px-12;
+  @apply 2xl:px-56 md:py-4 md:px-40 py-8 px-12;
 }
 
 .ok {
   background-color: #312320;
 }
 
-.gradient-1::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* Full coverage */
-  background-image: url("./../../public/images/hero-img.jpg"); /* Replace with the correct path */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  filter: hue-rotate(0deg); /* Applies monochrome filter and hue rotation */
-  z-index: -1; /* Places the background behind content */
+.primary-btn {
+  @apply bg-[var(--color-primary-500)] px-4 py-2 inline;
 }
 
-.gradient-1::after {
-  content: "";
+.gradient-1 {
+  /* content: ""; */
   position: absolute;
   inset: 0; /* Full coverage */
-  background-image: linear-gradient(
-    to top left,
-    var(--color-primary-100),
-    var(--color-primary-200),
-    var(--color-primary-300),
-    var(--color-primary-400)
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-950),
+    var(--color-primary-800)
   );
-  /* background-image: url("../../public/images/hero-img.jpg"); */
   background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents image repetition */
-  opacity: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mirror-bg {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../../public/images/hero-img.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
