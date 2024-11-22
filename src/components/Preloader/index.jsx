@@ -12,7 +12,7 @@ const words = [
   "やあ",
   "Hallå",
   "Guten tag",
-  "नमस्ते",
+  "Namaste",
 ];
 
 export default function Index() {

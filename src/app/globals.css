@@ -67,3 +67,24 @@ html {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Abous us */
+.about-us {
+  @apply lg:text-14xl md:text-10xl text-4xl font-poppins text-black font-black tracking-[1rem];
+}
+
+.about-us-bg1 {
+  background-image: url("../../public/images/ab-1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-us-bg2 {
+  background-image: url("../../public/images/ab-2.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
