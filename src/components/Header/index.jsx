@@ -24,9 +24,9 @@ export default function HeaderComponent() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(button.current, {
       scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight / 2,
+        // trigger: document.documentElement,
+        // start: 0,
+        // end: window.innerHeight / 2,
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
@@ -51,22 +51,14 @@ export default function HeaderComponent() {
         ref={header}
         className={`${styles.header} section-padding-sm  relative z-11`}
       >
-        <div className="bg-[var(--color-primary-50)] inset-0 absolute  "> </div>
+        <div className="inset-0 absolute  "> </div>
         <div>
           <Image src="/logo_2.png" alt="logo" width={100} height={100} />
         </div>
-        {/* <div className={styles.logo}>
-          <p className={styles.copyright}>©</p>
-          <div className={styles.name}>
-            <p className={styles.codeBy}>Code by</p>
-            <p className={styles.dennis}>Dennis</p>
-            <p className={styles.snellenberg}>Snellenberg</p>
-          </div>
-        </div> */}
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <a className="font-playfair lg:text-4xl md:text-2xl cursor-pointer">
+              <a className="font-poppins text-text-white lg:text-2xl md:text-2xl cursor-pointer">
                 Work
               </a>
               <div className={styles.indicator}></div>
@@ -74,7 +66,7 @@ export default function HeaderComponent() {
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a className="font-playfair lg:text-4xl md:text-2xl cursor-pointer">
+              <a className="font-poppins text-text-white lg:text-2xl md:text-2xl cursor-pointer">
                 About
               </a>
               <div className={styles.indicator}></div>
@@ -82,7 +74,7 @@ export default function HeaderComponent() {
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a className="font-playfair lg:text-4xl md:text-2x cursor-pointer">
+              <a className="font-poppins text-text-white lg:text-2xl md:text-2x cursor-pointer">
                 Contact
               </a>
               <div className={styles.indicator}></div>
@@ -90,6 +82,7 @@ export default function HeaderComponent() {
           </Magnetic>
         </div>
       </div>
+
       <div ref={button} className={styles.headerButtonContainer}>
         <Rounded
           onClick={() => {

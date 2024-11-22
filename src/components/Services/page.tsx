@@ -23,24 +23,30 @@ function Services() {
     requestAnimationFrame(raf);
   });
   return (
-    <main ref={container} className=" py-[40vh] relative section-padding">
-      <h2 className="lg:text-8xl md:text-6xl text-4xl font-playfair  font-bold text-center">
-        Our services
-      </h2>
-      {projects.map((project, i) => {
-        const targetScale = 1 - (projects.length - i) * 0.05;
-        return (
-          <Card
-            key={`p_${i}`}
-            i={i}
-            {...project}
-            progress={scrollYProgress}
-            range={[i * 0.25, 1]}
-            targetScale={targetScale}
-          />
-        );
-      })}
-    </main>
+    <>
+      <div className="flex">
+        <div className="left-container">
+          <h2 className="lg:text-8xl md:text-6xl text-4xl font-playfair  font-bold text-center relative ">
+            Our services
+          </h2>
+        </div>
+        <div ref={container} className=" relative section-padding">
+          {projects.map((project, i) => {
+            const targetScale = 1 - (projects.length - i) * 0.05;
+            return (
+              <Card
+                key={`p_${i}`}
+                i={i}
+                {...project}
+                progress={scrollYProgress}
+                range={[i * 0.25, 1]}
+                targetScale={targetScale}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -59,8 +59,8 @@ const LeadForm: React.FC = () => {
 
   return (
     <div className="z-10 flex items-center justify-center h-full section-padding">
-      <div className="w-full max-w-md p-6 rounded-lg shadow-md ">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <div className="mirror-bg py-16 px-16">
+        <h2 className="3xl:font-7xl font-semibold text-gray-800 mb-4">
           Welcome to Zenora
         </h2>
         <p className="text-gray-600 mb-6">

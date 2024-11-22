@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px", // Extra small screens
+        sm: "640px", // Small screens (default Tailwind breakpoint)
+        md: "768px", // Medium screens (default Tailwind breakpoint)
+        lg: "1024px", // Large screens (default Tailwind breakpoint)
+        xl: "1280px", // Extra-large screens (default Tailwind breakpoint)
+        "2xl": "1536px", // 2XL screens (default Tailwind breakpoint)
+        "3xl": "1920px", // Custom large screen for 4K displays
+      },
+
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -18,7 +28,8 @@ export default {
           muted: "#999999", // Lighter gray for muted or subtle text
           accent: "#66ccff", // Accent color for links or highlights
           navy: "#003366", // Navy blue for hero sections or headings
-          royal: "#4169e1", // Royal blue for headings or highlights
+          teal: "#a6f6f1",
+
           danger: "#ff4d4d", // Red for errors or warnings
           success: "#28a745", // Green for success messages
           white: "#ffffff", // White for text on dark backgrounds
@@ -26,13 +37,6 @@ export default {
       },
 
       fontSize: {
-        // Small Devices (e.g., Phones)
-        xs: ["0.75rem", "1rem"], // Extra small text
-        sm: ["0.875rem", "1.25rem"], // Small text
-        base: ["1rem", "1.5rem"], // Default body text
-        lg: ["1.125rem", "1.75rem"], // Large text
-        xl: ["1.25rem", "1.75rem"], // Extra large text
-
         // Medium Devices (e.g., Tablets)
         "2xl": ["2rem", "2.5rem"],
         "3xl": ["3rem", "3.5rem"],
@@ -43,7 +47,9 @@ export default {
         // Large Devices (e.g., Laptops & Desktops)
         "7xl": ["7rem", "7.5rem"],
         "8xl": ["8rem", "8.5rem"],
+        "9xl": ["9rem", "9.5rem"],
         "10xl": ["10rem", "10.5rem"], // Hero headings or banner text
+        "14xl": ["16rem", "14.5rem"],
       },
 
       borderRadius: {
@@ -51,7 +57,7 @@ export default {
       },
       fontFamily: {
         nunito: ["var(--font-nunito)", "sans-serif"], // Nunito as primary with sans-serif fallbackplayfair
-        playfair: ["var(--font-playfair)", "serif"], // Nunito as primary with sans-serif fallback
+        poppins: ["var(--font-poppins)", "serif"], // Nunito as primary with sans-serif fallback
       },
     },
   },
