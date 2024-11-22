@@ -89,31 +89,10 @@ export default function Scene2() {
       <div className="h-[100vh]"></div>
       <div className="h-[90vh]  grid grid-cols-[0.5fr_1.5fr_1fr]  grid-rows-[1fr_1.5fr_1.5fr] gap-x-[4rem] gap-y-[4rem]">
         <div class="col-span-3 flex items-center">
-          <h2
-            onMouseOver={() => {
-              setIsActive(true);
-            }}
-            onMouseLeave={() => {
-              setIsActive(false);
-            }}
-            className="about-us"
-          >
-            ABOUT
-          </h2>
+          <h2 className="about-us">ABOUT</h2>
         </div>
         <div class="">
-          {" "}
-          <h2
-            onMouseOver={() => {
-              setIsActive(true);
-            }}
-            onMouseLeave={() => {
-              setIsActive(false);
-            }}
-            className="about-us"
-          >
-            US
-          </h2>
+          <h2 className="about-us">US</h2>
         </div>
         <div class="bg-black rounded-custom-20 col-start-2 col-end-3 row-start-2 row-end-4 about-us-bg1 "></div>
         <div class="bg-black rounded-custom-20 about-us-bg2 "></div>
@@ -132,7 +111,7 @@ export default function Scene2() {
           <h3>Our Philosophy</h3>
           <p>
             At Britto Charette, we believe in creating luxurious, personalized
-            environments that reflect our clients' tastes and lifestyles.
+            environments that reflect our clients&apos; tastes and lifestyles.
           </p>
         </div>
       </div>
