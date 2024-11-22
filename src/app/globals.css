@@ -35,8 +35,16 @@ html {
   @apply bg-[var(--color-primary-500)] px-4 py-2 inline;
 }
 
+.gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-950),
+    var(--color-primary-800)
+  );
+}
+
 .gradient-1 {
-  /* content: ""; */
+  @apply gradient;
   position: absolute;
   inset: 0; /* Full coverage */
   background: linear-gradient(
@@ -87,4 +95,9 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Services */
+.left-container {
+  @apply sticky top-0 h-screen flex justify-center items-center border-r border-gray-300 gradient w-2/5 section-padding;
 }
