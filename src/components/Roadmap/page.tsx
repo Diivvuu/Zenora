@@ -1,15 +1,14 @@
 import { TriangleAlertIcon } from "lucide-react";
 import React from "react";
+import { gsap } from "gsap";
+import { useEffect } from "react";
 
 function Roadmap() {
   // Define the roadmap data
   const roadmapData = [
     { name: "Diagnosis", icon: <TriangleAlertIcon className="size-14" /> },
     { name: "Decision", icon: <TriangleAlertIcon className="size-14" /> },
-    {
-      name: "Treatment Plant",
-      icon: <TriangleAlertIcon className="size-14" />,
-    },
+    { name: "Treatment Plan", icon: <TriangleAlertIcon className="size-14" /> },
     { name: "Arrival", icon: <TriangleAlertIcon className="size-14" /> },
     { name: "Treatment", icon: <TriangleAlertIcon className="size-14" /> },
     { name: "Recovery", icon: <TriangleAlertIcon className="size-14" /> },
@@ -17,38 +16,54 @@ function Roadmap() {
   ];
 
   return (
-    <div className="mx-auto w-full py-32 bg-gray-200">
-      <div className="flex flex-col sm:flex-row items-center justify-center  space-y-8 sm:space-y-0">
+    <div className="mx-auto w-full py-32 bg-gray-200 font-poppins">
+      <div className="flex justify-center items-center w-full gap-x-32 mb-5">
+        {roadmapData.map((item, index) =>
+          index % 2 !== 0 ? (
+            <div
+              key={index}
+              className="ml-4 text-xl font-semibold w-full max-w-32 break-words text-center"
+            >
+              {roadmapData[index].name}
+            </div>
+          ) : (
+            <>&nbsp;</>
+          )
+        )}
+      </div>
+      <div className="w-full flex justify-center items-center">
         {roadmapData.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-start items-start gap-y-4 "
+            className="flex flex-col justify-center items-center gap-y-4"
           >
-            {index % 2 !== 0 ? (
-              <div className="text-center w-6/12 text-xl font-semibold">
-                {item.name}
-              </div>
-            ) : (
-              <>&nbsp;</>
-            )}
-            {/* Icon and Line */}
-            <div className="flex items-center justify-center gap-x-0">
+            {/* Icon and connecting line */}
+            <div className="flex items-center">
               <div className="p-8 bg-blue-100 rounded-full shadow-md">
                 {item.icon}
               </div>
               {index < roadmapData.length - 1 && (
-                <div className="sm:block w-20 h-1 bg-gradient-to-r from-blue-300 to-blue-600 "></div>
+                <div className="w-20 h-1 bg-black"></div>
               )}
             </div>
-            {index % 2 === 0 ? (
-              <div className="text-center w-9/12 text-xl font-semibold">
-                {item.name}
-              </div>
-            ) : (
-              <>&nbsp;</>
-            )}
+
+            {/* Map over names separately */}
           </div>
         ))}
+      </div>
+      <div className="flex justify-center items-center w-full gap-x-32 mt-5">
+        {roadmapData.map((item, index) =>
+          index % 2 === 0 ? (
+            <div
+              key={index}
+              className="ml-4 text-xl font-semibold w-full max-w-32 break-words text-center"
+            >
+              {roadmapData[index].name}
+            </div>
+          ) : (
+            <>&nbsp;</>
+          )
+        )}
       </div>
     </div>
   );
