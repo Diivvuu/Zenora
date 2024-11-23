@@ -1,6 +1,6 @@
 import React from "react";
 import Scene2 from "./scene2";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-
+  console.log(y);
   return (
     <div className="section-padding overflow-hidden">
       <Scene2 />
