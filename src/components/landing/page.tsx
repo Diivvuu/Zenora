@@ -36,7 +36,7 @@ const LandingPage = () => {
 
             {/* Right Container */}
             <div className="flex items-center justify-center md:h-full w-full lg:w-1/2 relative">
-              <div className="hero-bg h-[100vh]">
+              <div className="hero-bg h-full mr-8 rounded-2xl border-4 border-white">
                 <LeadForm />
               </div>
             </div>

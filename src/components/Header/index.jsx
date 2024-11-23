@@ -24,9 +24,9 @@ export default function HeaderComponent() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(button.current, {
       scrollTrigger: {
-        // trigger: document.documentElement,
-        // start: 0,
-        // end: window.innerHeight / 2,
+        trigger: document.documentElement,
+        start: 0,
+        end: window.innerHeight / 2,
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
