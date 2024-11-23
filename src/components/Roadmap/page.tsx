@@ -1,7 +1,5 @@
 import { TriangleAlertIcon } from "lucide-react";
 import React from "react";
-import { gsap } from "gsap";
-import { useEffect } from "react";
 
 function Roadmap() {
   // Define the roadmap data
