@@ -27,24 +27,15 @@ html {
   @apply 2xl:px-56 md:py-4 md:px-40 py-8 px-12;
 }
 
-.ok {
-  background-color: #312320;
-}
-
 .primary-btn {
   @apply bg-[var(--color-primary-500)] px-4 py-2 inline;
 }
 
-.gradient {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-950),
-    var(--color-primary-800)
-  );
+.primary-heading {
+  @apply 2xl:text-12xl xl:text-7xl lg:text-5xl text-4xl font-poppins font-bold text-text-teal lg:text-left text-center;
 }
 
 .gradient-1 {
-  @apply gradient;
   position: absolute;
   inset: 0; /* Full coverage */
   background: linear-gradient(
@@ -57,28 +48,23 @@ html {
   background-repeat: no-repeat;
 }
 
+.hero-bg {
+  background-image: url("../../public/images/hero-img.jpg");
+  animation: bg 10s infinite alternate linear;
+}
+
 .mirror-bg {
+  position: relative;
   background: rgba(255, 255, 255, 0.21);
-  border-radius: 16px;
+
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.6px);
   -webkit-backdrop-filter: blur(7.6px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../../public/images/hero-img.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Abous us */
 .about-us {
-  @apply lg:text-14xl md:text-10xl text-4xl font-poppins text-black font-black tracking-[1rem];
+  @apply lg:text-16xl md:text-10xl text-4xl font-poppins text-black font-black tracking-[1rem];
 }
 
 .about-us-bg1 {
@@ -99,5 +85,58 @@ html {
 
 /* Services */
 .left-container {
-  @apply sticky top-0 h-screen flex justify-center items-center border-r border-gray-300 gradient w-2/5 section-padding;
+  @apply sticky top-0 h-screen flex justify-center items-center border-r border-gray-300  w-2/5 section-padding;
+}
+
+/* Animations */
+@keyframes bg {
+  0% {
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+
+  20.001% {
+    background-position: 30% 85%;
+    background-size: 200%;
+  }
+
+  40% {
+    background-position: 49% 81%;
+    background-size: 200%;
+  }
+
+  40.001% {
+    background-position: 80% 42%;
+    background-size: 200%;
+  }
+
+  60% {
+    background-position: 84% 33%;
+    background-size: 200%;
+  }
+
+  60.001% {
+    background-position: 0% 0%;
+    background-size: 200%;
+  }
+
+  80% {
+    background-position: 15% 4%;
+    background-size: 200%;
+  }
+
+  80.001% {
+    background-position: 80% 10%;
+    background-size: 200%;
+  }
+
+  100% {
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
 }

@@ -49,7 +49,8 @@ export default {
         "8xl": ["8rem", "8.5rem"],
         "9xl": ["9rem", "9.5rem"],
         "10xl": ["10rem", "10.5rem"], // Hero headings or banner text
-        "14xl": ["16rem", "14.5rem"],
+        "12xl": ["12rem", "12.5rem"],
+        "16xl": ["16rem", "14.5rem"],
       },
 
       borderRadius: {

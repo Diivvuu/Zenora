@@ -22,7 +22,7 @@ const LandingPage = () => {
           <section className="flex flex-col lg:flex-row w-full h-[80vh] mt-48">
             {/* Left Container */}
             <div className="flex flex-col justify-center gap-y-4 w-full lg:w-1/2 section-padding">
-              <h1 className="2xl:text-10xl 2xl:text-8xl xl:text-7xl lg:text-5xl text-4xl font-poppins font-bold text-text-teal lg:text-left text-center">
+              <h1 className="primary-heading">
                 Welcome to <br />
                 <span>Zenora</span>
               </h1>
@@ -36,7 +36,7 @@ const LandingPage = () => {
 
             {/* Right Container */}
             <div className="flex items-center justify-center md:h-full w-full lg:w-1/2 relative">
-              <div className="hero-bg h-full mr-8 rounded-2xl border-4 border-white">
+              <div className="h-full w-full mr-8 section-padding">
                 <LeadForm />
               </div>
             </div>
