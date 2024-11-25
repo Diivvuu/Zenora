@@ -27,12 +27,20 @@ html {
   @apply 2xl:px-56 md:py-4 md:px-40 py-8 px-12;
 }
 
+.body-font-size {
+  @apply 2xl:text-2xl text-2xl;
+}
+
 .primary-btn {
   @apply bg-[var(--color-primary-500)] px-4 py-2 inline;
 }
 
 .primary-heading {
-  @apply 2xl:text-12xl xl:text-7xl lg:text-5xl text-4xl font-poppins font-bold text-text-teal lg:text-left text-center;
+  @apply 2xl:text-10xl xl:text-7xl lg:text-5xl text-4xl font-poppins font-bold text-text-teal lg:text-left text-center;
+}
+
+.tertiary-heading {
+  @apply text-white font-bold 3xl:text-9xl 2xl:text-8xl;
 }
 
 .gradient-1 {
@@ -50,12 +58,12 @@ html {
 
 .hero-bg {
   background-image: url("../../public/images/hero-img.jpg");
-  animation: bg 10s infinite alternate linear;
+  animation: bg 15s infinite alternate linear;
 }
 
 .mirror-bg {
   position: relative;
-  background: rgba(255, 255, 255, 0.21);
+  /* background: rgba(255, 255, 255, 0.21); */
 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.6px);
@@ -139,4 +147,48 @@ html {
     background-position: 36% 42%;
     background-size: 200%;
   }
+}
+
+.input-form {
+  @apply body-font-size  bg-transparent border-b border-white w-full relative outline-none py-2 text-white text-lg mb-8;
+}
+
+.input-form:focus ~ .label-form {
+  @apply body-font-size font-bold;
+  color: orange;
+  /* font-size: 16px; */
+  top: -20px;
+  transition: all 0.5s;
+}
+.label-form {
+  @apply body-font-size;
+}
+
+.input-box label {
+  color: white;
+  position: absolute;
+  padding: 10px 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.box input[type="submit"] {
+  background: transparent;
+  color: white;
+  border-spacing: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box input[type="submit"]:hover {
+  background: orange;
+  border: 1px solid orange;
+  transition: 0.3s;
 }

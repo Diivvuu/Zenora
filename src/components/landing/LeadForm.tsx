@@ -57,80 +57,63 @@ const LeadForm: React.FC = () => {
     console.log(data);
   };
 
+  const fields = [
+    {
+      name: "fullName",
+      type: "text",
+      label: "Full Name",
+      placeholder: "Your Name",
+    },
+    {
+      name: "email",
+      type: "email",
+      label: "Email Address",
+      placeholder: "Your Email",
+    },
+    {
+      name: "phoneNumber",
+      type: "text",
+      label: "Phone Number",
+      placeholder: "Your Phone Number",
+    },
+    {
+      name: "message",
+      type: "textarea",
+      label: "How can we help you?",
+      placeholder: "Message",
+    },
+  ];
+
   return (
-    <div className="z-10 flex items-center justify-center h-full  relative øverflow-hidden rounded-lg">
+    <div className="z-10 flex items-center justify-center h-full relative overflow-hidden rounded-lg">
       <div className="absolute inset-0 hero-bg"></div>
 
-      <div className="mirror-bg h-full w-full py-16 px-16">
-        <h2 className="3xl:font-7xl font-semibold text-gray-800 mb-4">
-          Welcome to Zenora
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Connect with us to explore how Zenora can elevate your business.
-        </p>
-
+      <div className="mirror-bg h-full w-full py-28 px-40">
+        <h3 className="tertiary-heading">Let's connect</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Full Name
-            </label>
-            <input
-              {...register("fullName")}
-              type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Your Name"
-            />
-            {errors.fullName && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.fullName.message}
-              </p>
-            )}
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email Address
-            </label>
-            <input
-              {...register("email")}
-              type="email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Your Email"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Phone Number
-            </label>
-            <input
-              {...register("phoneNumber")}
-              type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Your Phone Number"
-            />
-            {errors.phoneNumber && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.phoneNumber.message}
-              </p>
-            )}
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              How can we help you?
-            </label>
-            <textarea
-              {...register("message")}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-              placeholder="Message"
-            ></textarea>
-          </div>
+          {fields.map((field) => (
+            <div key={field.name} className="input-box relative">
+              {field.type === "textarea" ? (
+                <textarea
+                  {...register(field.name as keyof FormValues)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  placeholder={field.placeholder}
+                ></textarea>
+              ) : (
+                <input
+                  {...register(field.name as keyof FormValues)}
+                  type={field.type}
+                  className="input-form"
+                />
+              )}
+              <label className="label-form">{field.label}</label>
+              {errors[field.name as keyof FormValues] && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors[field.name as keyof FormValues]?.message}
+                </p>
+              )}
+            </div>
+          ))}
 
           <button
             type="submit"

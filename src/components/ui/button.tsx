@@ -4,28 +4,31 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-const buttonVariants = cva("inline-flex items-center justify-center", {
-  variants: {
-    variant: {
-      default:
-        "bg-white text-text-white border border-gray-300 hover:bg-teal-100 hover:text-teal-800 transition-colors",
-      outline:
-        "border border-gray-300 bg-transparent text-gray-800 hover:bg-teal-100 transition-colors",
-      ghost: "text-gray-800 hover:bg-teal-100 transition-colors",
-      link: "text-teal-800 underline hover:text-teal-600",
+const buttonVariants = cva(
+  "inline-flex items-center justify-center, relative",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-white py-2 px-4 text-[var(--color-primary-950)] border border-gray-300 hover:bg-teal-100 hover:text-white transition-colors font-semibold",
+        outline:
+          "border border-gray-300 bg-transparent text-gray-800 hover:bg-teal-100 transition-colors",
+        ghost: "text-gray-800 hover:bg-teal-100 transition-colors",
+        link: "text-teal-800 underline hover:text-teal-600",
+      },
+      size: {
+        default: "px-16 py-8 xl:text-4xl",
+        sm: "h-8 px-3 text-xs rounded-md",
+        lg: "h-10 px-6 text-base rounded-md",
+        icon: "h-9 w-9 flex items-center justify-center",
+      },
     },
-    size: {
-      default: "h-9 px-4 py-2 2xl:text-6xl rounded-md",
-      sm: "h-8 px-3 text-xs rounded-md",
-      lg: "h-10 px-6 text-base rounded-md",
-      icon: "h-9 w-9 flex items-center justify-center",
+    defaultVariants: {
+      variant: "default",
+      size: "default",
     },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "default",
-  },
-});
+  }
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

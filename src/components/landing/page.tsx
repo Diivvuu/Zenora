@@ -26,12 +26,18 @@ const LandingPage = () => {
                 Welcome to <br />
                 <span>Zenora</span>
               </h1>
-              <p className=" 2xl:text-4xl xl:text-3xl  lg:text-2xl  text-xl font-poppins text-text-white lg:text-left text-center">
+              <p className=" 2xl:text-4xl xl:text-3xl  lg:text-2xl  text-xl font-poppins text-text-white lg:text-left text-center mb-16">
                 Transforming Illness into Wellness
               </p>
-              <Button variant="ghost" size="sm">
-                Ghost
-              </Button>
+              <span>
+                <Button
+                  variant="default"
+                  size="default"
+                  className="after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-teal-500 after:bottom-[-2px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300"
+                >
+                  Ghost
+                </Button>
+              </span>
             </div>
 
             {/* Right Container */}
