@@ -35,10 +35,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <>
       <AuroraBackground showRadialGradient={true}>
-        <div
-          className="w-full bg-[var(--color-black)]  md:px-10"
-          ref={containerRef}
-        >
+        <div className="w-full gradient  md:px-10" ref={containerRef}>
           <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
             <h2 className="secondary-heading"> Here's how we assist you</h2>
           </div>
