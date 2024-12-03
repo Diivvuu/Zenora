@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${nunito.variable} ${inter.variable} antialiased`}>
-        <HeaderComponent />
+        {/* <HeaderComponent /> */}
         {children}
       </body>
     </html>

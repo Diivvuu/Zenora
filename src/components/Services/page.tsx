@@ -13,15 +13,9 @@ function Services() {
   }, []); // Runs once after the component mounts
 
   return (
-    <section className="section-services mt-[70vh]">
-      <div
-        className="section-padding w-full h-full relative mx-auto"
-        style={{ width: "70%" }}
-      >
-        <div
-          className="services-cards absolute top-0 left-0 flex gap-6 inset-0"
-          style={{ top: "-100%" }}
-        >
+    <section className="h-screen w-full">
+      <div className="w-full h-full relative m-auto">
+        <div className="flex items-center">
           {services.map((service, i) => (
             <Card
               key={i}

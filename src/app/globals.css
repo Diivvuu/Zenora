@@ -26,7 +26,7 @@ body {
 }
 
 .section-padding {
-  @apply 2xl:py-16 2xl:px-56 md:py-12 md:px-40  py-8 px-12;
+  @apply 2xl:py-16 2xl:px-80 md:py-12 md:px-64  py-8 px-12;
 }
 
 .section-padding-sm {
