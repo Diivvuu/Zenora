@@ -40,9 +40,9 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence> */}
 
-      {/* <LandingPage /> */}
-      <Timeline data={timelineData} />
+      <LandingPage />
       <Services />
+      <Timeline data={timelineData} />
       <About />
       <Footer />
     </>
