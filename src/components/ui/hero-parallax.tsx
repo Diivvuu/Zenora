@@ -111,8 +111,9 @@ export const Header = () => {
         Welcome to <br />
         Zenora
       </h1>
-
-      <PlaceholdersAndVanishInput placeholders="Which city?" />
+      <div className="mt-6">
+        <PlaceholdersAndVanishInput placeholders="Which city?" />
+      </div>
     </div>
   );
 };
