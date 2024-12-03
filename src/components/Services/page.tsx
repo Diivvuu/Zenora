@@ -1,52 +1,37 @@
 "use client";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
-import React, { useEffect, useRef } from "react";
-import { projects } from "@/constants/data";
+import { services } from "@/constants/data";
+import { useRef, useEffect } from "react";
 import Card from "./Card";
 
 function Services() {
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
-
+  const cardRef = useRef([]);
   useEffect(() => {
-    const lenis = new Lenis();
+    // Log all the service-card references
+    console.log("All Card Refs:", cardRef.current);
+  }, []); // Runs once after the component mounts
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  });
   return (
-    <>
-      <div className="flex">
-        <div className="left-container">
-          <h2 className="lg:text-8xl md:text-6xl text-4xl font-playfair  font-bold text-center relative ">
-            Our services
-          </h2>
-        </div>
-        <div ref={container} className=" relative section-padding">
-          {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
-            return (
-              <Card
-                key={`p_${i}`}
-                i={i}
-                {...project}
-                progress={scrollYProgress}
-                range={[i * 0.25, 1]}
-                targetScale={targetScale}
-              />
-            );
-          })}
+    <section className="section-services mt-[70vh]">
+      <div
+        className="section-padding w-full h-full relative mx-auto"
+        style={{ width: "70%" }}
+      >
+        <div
+          className="services-cards absolute top-0 left-0 flex gap-6 inset-0"
+          style={{ top: "-100%" }}
+        >
+          {services.map((service, i) => (
+            <Card
+              key={i}
+              service={service}
+              cardRef={(el) => (cardRef.current[i] = el)}
+            />
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

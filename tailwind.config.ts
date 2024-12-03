@@ -1,3 +1,4 @@
+import { Poppins } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -58,7 +59,9 @@ export default {
       },
       fontFamily: {
         nunito: ["var(--font-nunito)", "sans-serif"], // Nunito as primary with sans-serif fallbackplayfair
-        poppins: ["var(--font-poppins)", "serif"], // Nunito as primary with sans-serif fallback
+        rb: ["var(--font-rb)", "serif"],
+        poppins: ["var(--font-rb)", "serif"],
+        // robotoSlab: ["var(--font-robotoSlab", "serif"],
       },
     },
   },

@@ -1,8 +1,9 @@
 import HeaderComponent from "@/components/Header";
 import type { Metadata } from "next";
-import { Nunito, Poppins } from "next/font/google";
+import { Nunito, Poppins, Roboto_Slab } from "next/font/google";
 // import Lora from "next/font/local";
 import "./globals.css";
+import RO from "locomotive-scroll/dist/types/core/RO.js";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -10,11 +11,17 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-const poppins = Poppins({
+const rb = Roboto_Slab({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-poppins",
+  variable: "--font-rb",
 });
+
+// const robotoSlab = Roboto({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "700", "900"],
+//   variable: "--font-robotoSlab",
+// });
 
 export const metadata: Metadata = {
   title: "Zenora",
@@ -28,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${nunito.variable} ${poppins.variable} antialiased`}>
+      <body className={` ${nunito.variable} ${rb.variable} antialiased`}>
         <HeaderComponent />
         {children}
       </body>

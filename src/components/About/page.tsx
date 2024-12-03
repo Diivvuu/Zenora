@@ -15,12 +15,6 @@ export default function About() {
   return (
     <div className="section-padding overflow-hidden">
       <Scene2 />
-      {/* <Image
-          src={Background}
-          fill
-          alt="image"
-          style={{ objectFit: "cover" }}
-        /> */}
     </div>
   );
 }

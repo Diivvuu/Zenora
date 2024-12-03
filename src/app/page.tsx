@@ -7,7 +7,8 @@ import Lenis from "lenis";
 import About from "@/components/About/page";
 import Services from "@/components/Services/page";
 import Footer from "@/components/Footer/page";
-import Roadmap from "@/components/Roadmap/page";
+import { Timeline } from "@/components/ui/timeline";
+import { timelineData } from "@/constants/data";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,15 +35,16 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
-      <AnimatePresence mode="wait">
+    <>
+      {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence>
-      <LandingPage />
-      <About />
+      </AnimatePresence> */}
+
+      {/* <LandingPage /> */}
+      <Timeline data={timelineData} />
       <Services />
-      <Roadmap />
+      <About />
       <Footer />
-    </main>
+    </>
   );
 }

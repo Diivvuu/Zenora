@@ -19,6 +19,10 @@ html {
   font-size: 10px; /* Changes root font size */
 }
 
+body {
+  @apply gradient-1;
+}
+
 .section-padding {
   @apply 2xl:py-16 2xl:px-56 md:py-12 md:px-40  py-8 px-12;
 }
@@ -36,7 +40,11 @@ html {
 }
 
 .primary-heading {
-  @apply 2xl:text-10xl xl:text-7xl lg:text-5xl text-4xl font-poppins font-bold text-text-teal lg:text-left text-center;
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-10xl 3xl:text-12xl font-rb font-semibold text-text-white text-center;
+}
+
+.secondary-heading {
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-10xl 3xl:text-12xl font-rb font-semibold text-text-white text-center;
 }
 
 .tertiary-heading {
@@ -46,14 +54,12 @@ html {
 .gradient-1 {
   position: absolute;
   inset: 0; /* Full coverage */
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     var(--color-primary-950),
     var(--color-primary-800)
-  );
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center;
-  background-repeat: no-repeat;
+  ); */
+  background-color: var(--color-primary-950);
 }
 
 .hero-bg {
@@ -68,6 +74,26 @@ html {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.6px);
   -webkit-backdrop-filter: blur(7.6px);
+}
+
+.service-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  background: radial-gradient(
+    200px circle at 100px 100px,
+    rgba(255, 255, 255, 0.1),
+    transparent 40%
+  );
 }
 
 /* Abous us */
