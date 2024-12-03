@@ -1,28 +1,16 @@
 export const services = [
   {
-    title: "Diagnosis",
-    description: "",
+    title: "Medical Tourism",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adispisicing elit. Optio, aut?",
     src: "rock.jpg",
     link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
     color: "#BBACAF",
   },
   {
-    title: "Decision",
-    description: "",
-    src: "tree.jpg",
-    link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-    color: "#977F6D",
-  },
-  {
-    title: "Treatment planning",
-    description: "",
-    src: "tree.jpg",
-    link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-    color: "#977F6D",
-  },
-  {
-    title: "Treatment planning",
-    description: "",
+    title: "Wellness Tourism",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adispisicing elit. Optio, aut?",
     src: "tree.jpg",
     link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
     color: "#977F6D",

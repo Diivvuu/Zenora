@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-three/fiber": "^8.17.10",
     "@tabler/icons-react": "^3.24.0",
+    "@types/three": "^0.170.0",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.13.0",
+    "framer-motion": "^11.13.1",
     "gsap": "^3.12.5",
     "lenis": "^1.1.16",
     "locomotive-scroll": "^5.0.0-beta.21",
@@ -24,7 +26,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.53.2",
     "sass": "^1.80.6",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@types/node": "^20",

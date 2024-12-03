@@ -1,29 +1,24 @@
 "use client";
-import { useScroll } from "framer-motion";
-import Lenis from "lenis";
 import { services } from "@/constants/data";
-import { useRef, useEffect } from "react";
 import Card from "./Card";
+import { CardSpotlight } from "../ui/card-spotlight";
 
 function Services() {
-  const cardRef = useRef([]);
-  useEffect(() => {
-    // Log all the service-card references
-    console.log("All Card Refs:", cardRef.current);
-  }, []); // Runs once after the component mounts
+  // const cardRef = useRef([]);
 
   return (
-    <section className="h-screen w-full">
-      <div className="w-full h-full relative m-auto">
-        <div className="flex items-center">
-          {services.map((service, i) => (
+    <section className="h-[50vh] w-full">
+      <div className="flex items-center h-full justify-center gap-x-8">
+        {services.map((service, i) => (
+          <CardSpotlight key={i} className="rounded-xl">
             <Card
-              key={i}
-              service={service}
-              cardRef={(el) => (cardRef.current[i] = el)}
+              title={service.title}
+              description={service.description}
+              url={service.link}
+              // cardRef={(el: Event) => (cardRef.current[i] = el)}
             />
-          ))}
-        </div>
+          </CardSpotlight>
+        ))}
       </div>
     </section>
   );
