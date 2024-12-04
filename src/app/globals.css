@@ -26,7 +26,7 @@ body {
 }
 
 .section-padding {
-  @apply 2xl:py-16 2xl:px-80 md:py-12 md:px-64  py-8 px-12;
+  @apply 2xl:px-[36rem] 2xl:py-[10rem];
 }
 
 .section-padding-sm {
@@ -50,62 +50,15 @@ body {
 }
 
 .tertiary-heading {
-  @apply text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-6xl font-semibold  text-text-white;
+  @apply text-2xl sm:text-3xl 2xl:text-4xl  font-semibold  text-text-white;
 }
 
 .gradient {
   background: linear-gradient(
     var(--color-primary-950),
+    var(--color-primary-950),
+    var(--color-primary-950),
     var(--color-primary-800),
     var(--color-black)
   );
-}
-
-/* Services */
-.left-container {
-  @apply sticky top-0 h-screen flex justify-center items-center border-r border-gray-300  w-2/5 section-padding;
-}
-
-.input-form {
-  @apply body-font-size  bg-transparent border-b border-white w-full relative outline-none py-2 text-white text-lg mb-8;
-}
-
-.input-form:focus ~ .label-form {
-  @apply body-font-size font-bold;
-  color: orange;
-  /* font-size: 16px; */
-  top: -20px;
-  transition: all 0.5s;
-}
-.label-form {
-  @apply body-font-size;
-}
-
-.input-box label {
-  color: white;
-  position: absolute;
-  padding: 10px 0;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  transition: all 0.5s;
-}
-
-.box input[type="submit"] {
-  background: transparent;
-  color: white;
-  border-spacing: none;
-  border: 1px solid white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.box input[type="submit"]:hover {
-  background: orange;
-  border: 1px solid orange;
-  transition: 0.3s;
 }
