@@ -9,6 +9,7 @@ import Services from "@/components/Services/page";
 import Footer from "@/components/Footer/page";
 import { Timeline } from "@/components/ui/timeline";
 import { timelineData } from "@/constants/data";
+import ContactUs from "@/components/Contact/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +45,7 @@ export default function Home() {
       <Services />
       <Timeline data={timelineData} />
       <About />
+      <ContactUs />
       <Footer />
     </>
   );
