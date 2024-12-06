@@ -54,64 +54,71 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-700, 0]),
     springConfig
   );
   return (
-    <div
-      ref={ref}
-      className="gradient w-full h-[250vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-    >
-      <Header />
-      <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-        className=""
+    <>
+      <div
+        ref={ref}
+        className="section-padding gradient w-full  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
-    </div>
+        <AuroraBackground showRadialGradient={true}>
+          {" "}
+          <div className="py-80">
+            <Header />
+            <motion.div
+              style={{
+                rotateX,
+                rotateZ,
+                translateY,
+                opacity,
+              }}
+              className=""
+            >
+              <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb:8 md:mb-20">
+                {firstRow.map((product) => (
+                  <ProductCard
+                    product={product}
+                    translate={translateX}
+                    key={product.title}
+                  />
+                ))}
+              </motion.div>
+              <motion.div className="flex flex-row  mb-20 space-x-20 ">
+                {secondRow.map((product) => (
+                  <ProductCard
+                    product={product}
+                    translate={translateXReverse}
+                    key={product.title}
+                  />
+                ))}
+              </motion.div>
+              <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+                {thirdRow.map((product) => (
+                  <ProductCard
+                    product={product}
+                    translate={translateX}
+                    key={product.title}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </AuroraBackground>
+      </div>
+    </>
   );
 };
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl z-10 mb-5 relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="primary-heading">
         Welcome to <br />
         Zenora
       </h1>
-      <div className="mt-6">
+      <div>
         <PlaceholdersAndVanishInput placeholders="Which city?" />
       </div>
     </div>
@@ -138,7 +145,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-[12rem] w-[15rem] md:h-96 md:w-[30rem]  relative flex-shrink-0"
     >
       <Link
         href={product.link}

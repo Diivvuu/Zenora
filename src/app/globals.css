@@ -42,7 +42,7 @@ body {
 }
 
 .primary-heading {
-  @apply text-5xl sm:text-6xl 2xl:text-12xl 3xl:text-12xl font-bold text-center text-text-white;
+  @apply text-6xl sm:text-8xl xl:text-10xl 2xl:text-12xl  font-bold text-center text-text-white;
 }
 
 .secondary-heading {
@@ -55,10 +55,11 @@ body {
 
 .gradient {
   background: linear-gradient(
-    var(--color-primary-950),
-    var(--color-primary-950),
-    var(--color-primary-950),
     var(--color-primary-800),
-    var(--color-black)
+    var(--color-primary-800),
+    var(--color-primary-800),
+    var(--color-primary-800),
+    var(--color-primary-950),
+    var(--color-primary-950)
   );
 }
