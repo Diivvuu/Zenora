@@ -1,25 +1,16 @@
 "use client";
 import { services } from "@/constants/data";
-import Card from "./Card";
-import { CardSpotlight } from "../ui/card-spotlight";
+import { FocusCards } from "../ui/focus-cards";
 
 function Services() {
   // const cardRef = useRef([]);
 
   return (
-    <section className="h-[50vh] w-full">
-      <div className="flex items-center h-full justify-center gap-x-8">
-        {services.map((service, i) => (
-          <CardSpotlight key={i} className="rounded-xl">
-            <Card
-              title={service.title}
-              description={service.description}
-              url={service.link}
-              // cardRef={(el: Event) => (cardRef.current[i] = el)}
-            />
-          </CardSpotlight>
-        ))}
+    <section className="section-services w-full section-padding-sm">
+      <div>
+        <h2 className="secondary-heading text-text-white">Our services</h2>
       </div>
+      <FocusCards cards={services}></FocusCards>
     </section>
   );
 }

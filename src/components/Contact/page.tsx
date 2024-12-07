@@ -4,11 +4,11 @@ import { GlobeDemo } from "../ui/GithubGlobe";
 
 function ContactUs() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center gap-x-40">
-      <div>
+    <div className="w-full flex items-center justify-center gap-x-40 section-padding bg-black">
+      <div className="w-1/2">
         <SignupFormDemo />
       </div>
-      <div>
+      <div className="w-1/2">
         <GlobeDemo />
       </div>
     </div>

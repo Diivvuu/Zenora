@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Preloader from "@/components/Preloader";
 import LandingPage from "@/components/landing/page";
 import Lenis from "lenis";
-import About from "@/components/About/page";
+import HeaderComponent from "@/components/Header";
 import Services from "@/components/Services/page";
 import Footer from "@/components/Footer/page";
 import { Timeline } from "@/components/ui/timeline";
@@ -37,14 +37,14 @@ export default function Home() {
 
   return (
     <>
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence> */}
-
+      </AnimatePresence>
+      <HeaderComponent />
       <LandingPage />
       <Services />
       <Timeline data={timelineData} />
-      <About />
+
       <ContactUs />
       <Footer />
     </>

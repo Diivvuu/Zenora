@@ -15,6 +15,7 @@
   --color-primary-900: #005c56;
   --color-primary-950: #003f3c;
 
+  --color-dark-gray: #1a1a1a;
   --color-black: #000;
 }
 html {
@@ -30,11 +31,11 @@ body {
 }
 
 .section-padding-sm {
-  @apply 2xl:px-56 md:py-4 md:px-40 py-8 px-12;
+  @apply 2xl:px-[36rem] 2xl:py-[1rem];
 }
 
 .body-font-size {
-  @apply 2xl:text-2xl text-2xl;
+  @apply text-xl;
 }
 
 .primary-btn {
@@ -42,15 +43,16 @@ body {
 }
 
 .primary-heading {
-  @apply text-6xl sm:text-8xl xl:text-10xl 2xl:text-12xl  font-bold text-center text-text-white;
+  @apply text-6xl sm:text-8xl xl:text-10xl 2xl:text-12xl  font-medium
+ text-center text-text-white;
 }
 
 .secondary-heading {
-  @apply text-4xl sm:text-5xl 2xl:text-6xl 3xl:text-8xl font-bold  text-text-white;
+  @apply text-4xl sm:text-5xl 2xl:text-6xl 3xl:text-8xl font-semibold;
 }
 
 .tertiary-heading {
-  @apply text-2xl sm:text-3xl 2xl:text-4xl  font-semibold  text-text-white;
+  @apply text-2xl 2xl:text-3xl  font-semibold;
 }
 
 .gradient {
@@ -60,6 +62,8 @@ body {
     var(--color-primary-800),
     var(--color-primary-800),
     var(--color-primary-950),
-    var(--color-primary-950)
+    var(--color-primary-950),
+    rgb(2 6 23),
+    rgb(2 6 23)
   );
 }
