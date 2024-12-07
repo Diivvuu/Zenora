@@ -1,6 +1,5 @@
 import React from "react";
 import { Input, Label } from "../ui/input";
-import Label 
 
 const Page = () => {
   return (
