@@ -10,6 +10,8 @@ import Footer from "@/components/Footer/page";
 import { Timeline } from "@/components/ui/timeline";
 import { timelineData } from "@/constants/data";
 import ContactUs from "@/components/Contact/page";
+import { Marquee } from "@/components/ui/marquee";
+import Testimonials from "@/components/Testimonials/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,7 +46,7 @@ export default function Home() {
       <LandingPage />
       <Services />
       <Timeline data={timelineData} />
-
+      <Testimonials />
       <ContactUs />
       <Footer />
     </>
