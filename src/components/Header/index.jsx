@@ -21,6 +21,7 @@ export default function HeaderComponent() {
   }, [pathname]);
 
   useLayoutEffect(() => {
+    const isMobileOrTablet = window.innerWidth <= 1024;
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(button.current, {
       scrollTrigger: {
@@ -56,30 +57,21 @@ export default function HeaderComponent() {
           <Image src="/logo_2.png" alt="logo" width={100} height={100} />
         </div>
         <div className={styles.nav}>
-          <Magnetic>
-            <div className={styles.el}>
-              <a className="font-poppins text-text-white lg:text-2xl md:text-2xl cursor-pointer">
-                Work
-              </a>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <a className="font-poppins text-text-white lg:text-2xl md:text-2xl cursor-pointer">
-                About
-              </a>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <a className="font-poppins text-text-white lg:text-2xl md:text-2x cursor-pointer">
-                Contact
-              </a>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
+          <div className={styles.el}>
+            <a className="font-poppins text-text-white lg:text-2xl md:text-2xl cursor-pointer">
+              Work
+            </a>
+          </div>
+          <div className={styles.el}>
+            <a className="font-poppins text-text-white lg:text-2xl md:text-2xl cursor-pointer">
+              About
+            </a>
+          </div>
+          <div className={styles.el}>
+            <a className="font-poppins text-text-white lg:text-2xl md:text-2x cursor-pointer">
+              Contact
+            </a>
+          </div>
         </div>
       </div>
 

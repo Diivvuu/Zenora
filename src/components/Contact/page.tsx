@@ -5,12 +5,11 @@ import { AuroraBackground } from "../ui/aurora-background";
 
 function ContactUs() {
   return (
-    <div className="w-full flex items-center justify-center gap-x-40 section-padding bg-[#1a1a1a]  z-[10]">
-      <div className="w-1/2">
+    <div className="w-full flex h-screen items-center justify-center gap-x-40 px-20 bg-black z-[10]">
+      <div className="hide-on-small md:w-1/2 md:h-full md:flex md:items-center">
         <GlobeDemo />
       </div>
-      <div className="w-1/2">
-        {" "}
+      <div className="w-1/2 px-40">
         <SignupFormDemo />
       </div>
     </div>

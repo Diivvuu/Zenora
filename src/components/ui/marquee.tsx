@@ -10,7 +10,7 @@ interface MarqueeProps {
   [key: string]: any;
 }
 
-export default function Marquee({
+const Marquee = ({
   className,
   reverse,
   pauseOnHover = false,
@@ -18,7 +18,7 @@ export default function Marquee({
   vertical = false,
   repeat = 4,
   ...props
-}: MarqueeProps) {
+}: MarqueeProps) => {
   return (
     <div
       {...props}
@@ -28,7 +28,7 @@ export default function Marquee({
           "flex-row": !vertical,
           "flex-col": vertical,
         },
-        className,
+        className
       )}
     >
       {Array(repeat)
@@ -48,4 +48,6 @@ export default function Marquee({
         ))}
     </div>
   );
-}
+};
+
+export default Marquee;

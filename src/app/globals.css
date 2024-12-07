@@ -67,3 +67,8 @@ body {
     rgb(2 6 23)
   );
 }
+@media (max-width: 1024px) {
+  .hide-on-small {
+    visibility: hidden;
+  }
+}

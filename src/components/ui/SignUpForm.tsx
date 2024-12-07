@@ -38,13 +38,13 @@ export function SignupFormDemo() {
 
   return (
     <div className="w-full mx-auto rounded-none md:rounded-2xl md:p-8 shadow-input ">
-      <h2 className="secondary-heading text-text-white">Need any help?</h2>
+      <h2 className="text-3xl text-text-white">Need any help?</h2>
       <p className="body-font-size text-text-white">
         Connect with us to get the help you need!
       </p>
 
       <form
-        className="my-8 p-[4rem] border border-rounded"
+        className="my-8 p-[4rem] rounded-xl  bg-[#1a1a1a]"
         onSubmit={handleSubmit}
       >
         {formFields.map((field, index) => (
@@ -52,12 +52,24 @@ export function SignupFormDemo() {
             key={field.id}
             className={index !== formFields.length - 1 ? "mb-4" : "mb-8"}
           >
-            <Label htmlFor={field.id}>{field.label}</Label>
-            <Input
-              id={field.id}
-              placeholder={field.placeholder}
-              type={field.type}
-            />
+            <Label htmlFor={field.id} className="text-xl">
+              {field.label}
+            </Label>
+            {field.id === "message" ? (
+              <textarea
+                className="bg-[#0003] text-white h-40 border-none outline-none placeholder:py- resize-none"
+                id={field.id}
+                placeholder={field.placeholder}
+                // type={field.type}
+              />
+            ) : (
+              <Input
+                className="bg-[#0003] text-white border-none"
+                id={field.id}
+                placeholder={field.placeholder}
+                type={field.type}
+              />
+            )}
           </LabelInputContainer>
         ))}
 
@@ -70,26 +82,6 @@ export function SignupFormDemo() {
         </button>
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-
-        <div className="flex flex-col space-y-4">
-          {[
-            { icon: IconBrandGithub, label: "GitHub" },
-            { icon: IconBrandGoogle, label: "Google" },
-            { icon: IconBrandOnlyfans, label: "OnlyFans" },
-          ].map(({ icon: Icon, label }) => (
-            <button
-              key={label}
-              className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-              type="submit"
-            >
-              <Icon className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                {label}
-              </span>
-              <BottomGradient />
-            </button>
-          ))}
-        </div>
       </form>
     </div>
   );
