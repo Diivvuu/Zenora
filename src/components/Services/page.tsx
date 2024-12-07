@@ -1,16 +1,15 @@
 "use client";
 import { services } from "@/constants/data";
-import { FocusCards } from "../ui/focus-cards";
+import { CardDemo } from "../ui/service-card";
 
 function Services() {
   // const cardRef = useRef([]);
 
   return (
-    <section className="section-services w-full section-padding-sm">
-      <div>
-        <h2 className="secondary-heading text-text-white">Our services</h2>
+    <section className="section-services w-full section-padding-sm relative">
+      <div className="absolute top-[-10rem] left-1/2 transform -translate-x-1/2">
+        <CardDemo services={services} />
       </div>
-      <FocusCards cards={services}></FocusCards>
     </section>
   );
 }

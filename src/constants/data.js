@@ -9,6 +9,7 @@ export const services = [
     color: "#BBACAF",
     src: "/images/1.jpg",
   },
+
   {
     index: 2,
     title: "Wellness Tourism",

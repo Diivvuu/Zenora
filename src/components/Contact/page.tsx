@@ -9,8 +9,10 @@ function ContactUs() {
       <div className="w-1/2">
         <GlobeDemo />
       </div>
-      <div className="w-1/2"></div>
-      <SignupFormDemo />
+      <div className="w-1/2">
+        {" "}
+        <SignupFormDemo />
+      </div>
     </div>
   );
 }
