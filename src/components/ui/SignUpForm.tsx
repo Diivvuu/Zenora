@@ -44,7 +44,7 @@ export function SignupFormDemo() {
       </p>
 
       <form
-        className="my-8 p-[4rem] rounded-xl  bg-[#1a1a1a]"
+        className="my-8 py-12 px-8 rounded-xl  bg-[#1a1a1a]"
         onSubmit={handleSubmit}
       >
         {formFields.map((field, index) => (
@@ -57,14 +57,15 @@ export function SignupFormDemo() {
             </Label>
             {field.id === "message" ? (
               <textarea
-                className="bg-[#0003] text-white h-40 border-none outline-none placeholder:py- resize-none"
+                className="bg-[#0003] text-white h-40 border-none outline-none py-2 px-3 resize-none
+                placeholder:text-neutral-400 dark:placeholder-text-neutral-600"
                 id={field.id}
                 placeholder={field.placeholder}
                 // type={field.type}
               />
             ) : (
               <Input
-                className="bg-[#0003] text-white border-none"
+                className="bg-[#0003] text-white border-none text-sm"
                 id={field.id}
                 placeholder={field.placeholder}
                 type={field.type}
@@ -77,7 +78,7 @@ export function SignupFormDemo() {
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Sign up &rarr;
+          Send Note &rarr;
           <BottomGradient />
         </button>
 

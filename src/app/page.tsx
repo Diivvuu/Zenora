@@ -7,11 +7,11 @@ import Lenis from "lenis";
 import HeaderComponent from "@/components/Header";
 import Services from "@/components/Services/page";
 import Footer from "@/components/Footer/page";
-import { Timeline } from "@/components/ui/timeline";
 import { timelineData } from "@/constants/data";
 import ContactUs from "@/components/Contact/page";
 import { Marquee } from "@/components/ui/marquee";
 import Testimonials from "@/components/Testimonials/page";
+import Roadmap from "@/components/Roadmap/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,7 +45,7 @@ export default function Home() {
       <HeaderComponent />
       <LandingPage />
       <Services />
-      <Timeline data={timelineData} />
+      <Roadmap data={timelineData} />
       <Testimonials />
       <ContactUs />
       <Footer />
