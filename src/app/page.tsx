@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Preloader from "@/components/Preloader";
 import LandingPage from "@/components/landing/page";
 import Lenis from "lenis";
@@ -14,6 +14,7 @@ import Testimonials from "@/components/Testimonials/page";
 import Roadmap from "@/components/Roadmap/page";
 
 export default function Home() {
+  const contactUsRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -43,11 +44,17 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence> */}
       <HeaderComponent />
-      <LandingPage />
+      <LandingPage
+        scrollToContact={() =>
+          contactUsRef.current.scrollIntoView({ behavior: "smooth" })
+        }
+      />
       {/* <Services /> */}
       <Roadmap data={timelineData} />
       <Testimonials />
-      <ContactUs />
+      <div ref={contactUsRef} id="contact-us">
+        <ContactUs />
+      </div>
       <Footer />
     </>
   );

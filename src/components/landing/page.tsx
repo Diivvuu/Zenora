@@ -7,7 +7,7 @@ import { BackgroundBeams } from "../ui/background-beams";
 import { FocusCards } from "../ui/focus-cards";
 import { services } from "@/constants/data";
 
-const LandingPage = () => {
+const LandingPage = ({ scrollToContact }) => {
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
@@ -31,7 +31,10 @@ const LandingPage = () => {
           <div className="flex items-center justify-center mt-20">
             <FocusCards cards={services} />
           </div>
-          <div className="absolute right-40 bottom-20">
+          <div
+            className="absolute right-40 bottom-20"
+            onClick={scrollToContact}
+          >
             <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               Tap here
             </button>

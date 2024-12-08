@@ -11,7 +11,7 @@ interface RoadmapProps {
 
 function Roadmap({ data }: RoadmapProps) {
   return (
-    <div className="h-[80vh] w-full flex items-center justify-center relative">
+    <div className="h-[40vh] w-full flex items-center justify-center relative">
       <div className="w-8/12 relative">
         <div className="absolute w-full h-4 bg-gradient-to-r from-gray-400 via-gray-400 to-gray-900"></div>
         <div className="w-full flex justify-between items-center px-16">

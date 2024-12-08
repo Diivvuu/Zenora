@@ -36,7 +36,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     <>
       <div className="w-full  section-padding" ref={containerRef}>
         <div className="py-20 ">
-          <h2 className="secondary-heading"> Here's how we assist you</h2>
+          <h2 className="secondary-heading"> Here&apos;s how we assist you</h2>
         </div>
 
         <div ref={ref} className="relative  pb-20">
