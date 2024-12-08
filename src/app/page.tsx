@@ -44,7 +44,7 @@ export default function Home() {
       </AnimatePresence> */}
       <HeaderComponent />
       <LandingPage />
-      <Services />
+      {/* <Services /> */}
       <Roadmap data={timelineData} />
       <Testimonials />
       <ContactUs />

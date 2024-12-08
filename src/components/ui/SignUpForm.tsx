@@ -52,7 +52,7 @@ export function SignupFormDemo() {
             key={field.id}
             className={index !== formFields.length - 1 ? "mb-4" : "mb-8"}
           >
-            <Label htmlFor={field.id} className="text-xl">
+            <Label htmlFor={field.id} className="text-xl mx-2">
               {field.label}
             </Label>
             {field.id === "message" ? (
@@ -61,7 +61,6 @@ export function SignupFormDemo() {
                 placeholder:text-neutral-400 dark:placeholder-text-neutral-600"
                 id={field.id}
                 placeholder={field.placeholder}
-                // type={field.type}
               />
             ) : (
               <Input
