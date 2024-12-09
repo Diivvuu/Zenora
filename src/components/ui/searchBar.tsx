@@ -3,57 +3,37 @@ import { Search, X } from "lucide-react";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const primaryColor = "#00afa7";
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Implement search logic here
     console.log("Searching for:", searchTerm);
   };
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSearch} className="relative">
-        <div
-          className="flex items-center border-2 rounded-full overflow-hidden shadow-md transition-all duration-300 ease-in-out"
-          style={{
-            borderColor: primaryColor,
-            backgroundColor: "white",
-          }}
+    <form
+      onSubmit={handleSearch}
+      className="flex items-center bg-[rgba(0,0,0,0.2)] rounded-full p-4 max-w-md mx-auto shadow-md"
+    >
+      <input
+        type="text"
+        placeholder="Search..."
+        className="body-font-size bg-transparent flex-1  outline-none px-4 py-2 placeholder-gray-400 text-text-white"
+      />
+      <button
+        type="button"
+        className="rounded-full p-2 flex items-center justify-center bg-[linear-gradient(to_right,var(--color-primary-400),var(--color-primary-500))]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="white"
+          width="20px"
+          height="20px"
         >
-          <input
-            type="text"
-            placeholder="Search healthcare services, resources, and more..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full body-font-size px-6 py-3 outline-none"
-          />
-
-          {/* Clear button */}
-          {searchTerm && (
-            <button
-              type="button"
-              onClick={() => setSearchTerm("")}
-              className="mr-2 hover:bg-gray-100 rounded-full p-1 transition-colors"
-            >
-              <X size={20} className="text-gray-500" />
-            </button>
-          )}
-
-          {/* Search button */}
-          <button
-            type="submit"
-            className="p-3 transition-colors duration-300"
-            style={{
-              backgroundColor: primaryColor,
-              color: "white",
-            }}
-          >
-            <Search size={24} />
-          </button>
-        </div>
-      </form>
-    </div>
+          <path d="M10 2a8 8 0 105.3 14.3l5.4 5.4a1 1 0 001.4-1.4l-5.4-5.4A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z" />
+        </svg>
+      </button>
+    </form>
   );
 };
 

@@ -1,17 +1,19 @@
 "use client";
+
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Preloader from "@/components/Preloader";
-import LandingPage from "@/components/landing/page";
+import Button from "@/components/ui/button";
+import Hero from "@/components/landing/page";
 import Lenis from "lenis";
 import HeaderComponent from "@/components/Header";
-import Services from "@/components/Services/page";
 import Footer from "@/components/Footer/page";
 import { timelineData } from "@/constants/data";
 import ContactUs from "@/components/Contact/page";
-import { Marquee } from "@/components/ui/marquee";
 import Testimonials from "@/components/Testimonials/page";
 import Roadmap from "@/components/Roadmap/page";
+import ParallaxSection from "@/components/ui/parallexComponent";
+import ButtonDemo from "@/components/ui/kk";
 
 export default function Home() {
   const contactUsRef = useRef<HTMLDivElement>(null);
@@ -39,23 +41,33 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className="relative">
       {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence> */}
+      {/* 
+      <Button
+        variant="secondary"
+        state="hover"
+        className="absolute top-[100%] left-[90%]S"
+      >
+        Button
+      </Button> */}
       <HeaderComponent />
-      <LandingPage
+      <Hero
         scrollToContact={() =>
           contactUsRef.current.scrollIntoView({ behavior: "smooth" })
         }
       />
-      {/* <Services /> */}
       <Roadmap data={timelineData} />
       <Testimonials />
+      <ParallaxSection />
       <div ref={contactUsRef} id="contact-us">
         <ContactUs />
       </div>
+
+      <ButtonDemo />
       <Footer />
-    </>
+    </div>
   );
 }

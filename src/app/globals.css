@@ -27,15 +27,19 @@ body {
 }
 
 .section-padding {
-  @apply 2xl:px-[36rem] 2xl:py-[10rem];
+  @apply lg:px-[12rem] 2xl:px-[36rem] 2xl:py-[10rem];
 }
 
 .section-padding-sm {
-  @apply 2xl:px-[36rem] 2xl:py-[1rem];
+  @apply lg:px-[12rem] 2xl:px-[36rem] 2xl:py-[1rem];
 }
 
 .body-font-size {
   @apply text-xl;
+}
+
+.small-font-size {
+  @apply text-lg;
 }
 
 .primary-btn {
@@ -43,7 +47,7 @@ body {
 }
 
 .primary-heading {
-  @apply text-6xl sm:text-8xl xl:text-10xl 2xl:text-12xl  font-medium
+  @apply text-6xl sm:text-8xl xl:text-10xl font-medium
  text-center text-text-white;
 }
 
@@ -71,4 +75,28 @@ body {
   .hide-on-small {
     visibility: hidden;
   }
+}
+
+.parallax-section {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"); /* Replace with your image URL */
+  background-attachment: fixed; /* This makes the background fixed for the parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 20px 0;
 }

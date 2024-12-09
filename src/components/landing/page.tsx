@@ -7,7 +7,7 @@ import { BackgroundBeams } from "../ui/background-beams";
 import { FocusCards } from "../ui/focus-cards";
 import { services } from "@/constants/data";
 
-const LandingPage = ({ scrollToContact }) => {
+const Hero = ({ scrollToContact }) => {
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
@@ -18,9 +18,9 @@ const LandingPage = ({ scrollToContact }) => {
     <>
       <AuroraBackground showRadialGradient={true}>
         <BackgroundBeams />
-        <div className="z-10 mb-5 relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0 section-padding  h-screen flex flex-col justify-center">
+        <div className="z-10 mb-5 relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0 section-padding  h-[60vh] flex flex-col justify-center">
           <div className="mb-[5rem]">
-            <h1 className="text-5xl font-semibold text-center text-white">
+            <h1 className="primary-heading">
               Welcome to <br />
               Zenora
             </h1>
@@ -28,7 +28,7 @@ const LandingPage = ({ scrollToContact }) => {
           <div>
             <SearchBar />
           </div>
-          <div className="flex items-center justify-center mt-20">
+          <div className="absolute inset-0 top-[100%] flex items-center justify-center mt-20">
             <FocusCards cards={services} />
           </div>
           <div
@@ -46,4 +46,4 @@ const LandingPage = ({ scrollToContact }) => {
   );
 };
 
-export default LandingPage;
+export default Hero;

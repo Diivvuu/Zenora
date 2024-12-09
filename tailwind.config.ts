@@ -77,6 +77,17 @@ module.exports = {
         "3xl": "1920px",
       },
       colors: {
+        green: {
+          500: "#38b2ac",
+          600: "#319795",
+          700: "#2c7a7b",
+        },
+        gray: {
+          200: "#e2e8f0",
+          300: "#cbd5e0",
+          400: "#a0aec0",
+          700: "#4a5568",
+        },
         background: "var(--background)",
         foreground: "var(--foreground)",
         text: {

@@ -1,53 +1,73 @@
-import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
+import React from "react";
 
-import { cn } from "@/lib/utils";
-
-const buttonVariants = cva(
-  "inline-flex items-center justify-center, relative",
-  {
-    variants: {
-      variant: {
-        default:
-          "bg-white py-2 px-4 text-[var(--color-primary-950)] border border-gray-300 hover:bg-teal-100 hover:text-white transition-colors font-semibold",
-        outline:
-          "border border-gray-300 bg-transparent text-gray-800 hover:bg-teal-100 transition-colors",
-        ghost: "text-gray-800 hover:bg-teal-100 transition-colors",
-        link: "text-teal-800 underline hover:text-teal-600",
-      },
-      size: {
-        default: "px-16 py-8 xl:text-4xl",
-        sm: "h-8 px-3 text-xs rounded-md",
-        lg: "h-10 px-6 text-base rounded-md",
-        icon: "h-9 w-9 flex items-center justify-center",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-);
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+interface ButtonProps {
+  variant: "primary" | "secondary";
+  state?: "default" | "hover" | "disabled" | "active" | "loading";
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string; // Add custom className prop
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
-Button.displayName = "Button";
+const Button: React.FC<ButtonProps> = ({
+  variant,
+  state = "default",
+  children,
+  onClick,
+  className = "", // Default to an empty string
+}) => {
+  // Define base styles
+  const baseStyles =
+    "small-font-size rounded-full px-6 py-2 font-semibold flex items-center justify-center transition-all duration-200";
 
-export { Button, buttonVariants };
+  // Define variant styles
+  const variantStyles =
+    variant === "primary"
+      ? "text-white bg-green-500"
+      : "text-gray-700 bg-white border border-gray-300";
+
+  // Define state styles
+  const stateStyles = {
+    default: "",
+    hover: "hover:bg-green-600 hover:text-white",
+    disabled: "opacity-50 cursor-not-allowed",
+    active: "bg-green-700",
+    loading: "opacity-75 cursor-wait",
+  };
+
+  // Combine styles
+  const combinedStyles = `${baseStyles} ${variantStyles} ${stateStyles[state]} ${className}`;
+
+  return (
+    <button
+      className={combinedStyles}
+      onClick={state !== "disabled" ? onClick : undefined}
+      disabled={state === "disabled"}
+    >
+      {state === "loading" && (
+        <svg
+          className="animate-spin mr-2 h-5 w-5 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+          ></circle>
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8v4l3-3-3-3v4c-4.41 0-8 3.59-8 8z"
+          ></path>
+        </svg>
+      )}
+      {children}
+    </button>
+  );
+};
+
+export default Button;
