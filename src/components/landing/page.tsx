@@ -18,7 +18,7 @@ const Hero = ({ scrollToContact }) => {
     <>
       <AuroraBackground showRadialGradient={true}>
         <BackgroundBeams />
-        <div className="z-10 mb-5 relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0 section-padding  h-[60vh] flex flex-col justify-center">
+        <div className="z-10 mb-[12rem] relative px-4 w-full  left-0 top-0 section-padding h-[70vh] flex flex-col justify-center">
           <div className="mb-[5rem]">
             <h1 className="primary-heading">
               Welcome to <br />
@@ -28,7 +28,7 @@ const Hero = ({ scrollToContact }) => {
           <div>
             <SearchBar />
           </div>
-          <div className="absolute inset-0 top-[100%] flex items-center justify-center mt-20">
+          <div className="absolute inset-0 top-[110%] flex items-center justify-center mt-20">
             <FocusCards cards={services} />
           </div>
           <div
