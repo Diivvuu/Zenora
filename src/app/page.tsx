@@ -62,10 +62,7 @@ export default function Home() {
       <Roadmap data={timelineData} />
       <Testimonials />
       <ParallaxSection />
-      <div ref={contactUsRef} id="contact-us">
-        <ContactUs />
-      </div>
-
+      <ContactUs />
       <ButtonDemo />
       <Footer />
     </div>

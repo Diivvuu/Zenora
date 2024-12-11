@@ -103,6 +103,7 @@ module.exports = {
         },
       },
       fontSize: {
+        lg: ["1.4rem", "2rem"],
         xl: ["1.6rem", "2rem"],
         "2xl": ["2rem", "2.5rem"],
         "3xl": ["3rem", "3.5rem"],

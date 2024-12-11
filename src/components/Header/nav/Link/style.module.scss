@@ -1,14 +1,25 @@
 .link {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff5733; // Change text color on hover
+  }
 
   .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: white;
+    width: 5px;
+    height: 5px;
+    background: transparent;
     border-radius: 50%;
-    position: absolute;
-    left: -30px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+
+    // On hover, change the indicator styling
+    .link:hover & {
+      background: #ff5733;
+    }
   }
 }

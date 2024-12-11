@@ -16,7 +16,9 @@
   --color-primary-950: #003f3c;
 
   --color-dark-gray: #1a1a1a;
+  --color-light-gray: #7b88a8
   --color-black: #000;
+  --color-white: #fff;
 }
 html {
   font-size: 10px; /* Changes root font size */
@@ -34,6 +36,14 @@ body {
   @apply lg:px-[12rem] 2xl:px-[24rem] 2xl:py-[1rem];
 }
 
+.section-mb{
+  @apply mb-[16rem];
+}
+
+.card-padding {
+  @apply lg:px-[3rem] lg:py-[2rem];
+}
+
 .body-font-size {
   @apply text-xl;
 }
@@ -42,12 +52,16 @@ body {
   @apply text-lg;
 }
 
+.large-font-size {
+  @apply text-2xl;
+}
+
 .primary-btn {
   @apply bg-[var(--color-primary-500)] px-4 py-2 inline;
 }
 
 .primary-heading {
-  @apply text-6xl sm:text-8xl xl:text-10xl font-medium
+  @apply text-6xl sm:text-8xl lg:text-10xl font-medium
  text-center text-text-white;
 }
 
@@ -56,7 +70,11 @@ body {
 }
 
 .tertiary-heading {
-  @apply text-2xl 2xl:text-3xl  font-semibold;
+  @apply text-2xl lg:text-3xl  font-semibold;
+}
+
+.subheading{
+  @apply lg:text-2xl text-[var(--color-light-gray)]
 }
 
 .gradient {
@@ -70,6 +88,25 @@ body {
     rgb(2 6 23),
     rgb(2 6 23)
   );
+}
+
+.gradient-2 {
+  background: linear-gradient(
+    var(--color-primary-500),
+    var(--color-primary-600),
+    var(--color-primary-700),
+    var(--color-primary-800),
+    var(--color-primary-800)
+  );
+}
+
+.highlighted-text-light {
+  color: var(--color-white);
+  text-shadow: 0px 0px 5px #ffffff80;
+}
+
+.highlighted-text-dark {
+  color: var(--color-primary-500);
 }
 @media (max-width: 1024px) {
   .hide-on-small {
