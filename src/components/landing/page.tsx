@@ -29,7 +29,7 @@ const Hero = ({ scrollToContact }) => {
             <div>
               <SearchBar />
             </div>
-            <div className="absolute inset-0 top-[110%] flex items-center justify-center mt-20">
+            <div className="absolute inset-0 top-[105%] md:top-[110%] flex items-center justify-center mt-20">
               <FocusCards cards={services} />
             </div>
             <div

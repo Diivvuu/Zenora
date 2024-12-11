@@ -37,6 +37,41 @@ const reviews = [
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/jenny",
   },
+  {
+    name: "Bonnie Green",
+    role: "Developer at Open AI",
+    comment: "Very easy this was to integrate.",
+    body: "If you care for you time, I hands down would go with this.",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Roberta Casas",
+    role: "Lead designer at Dropbox",
+    comment: "Solid foundation for any project",
+    body: "Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver.",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "Jese Leos",
+    role: "Software Engineer at Facebook",
+    comment: "Mindblowing workflow",
+    body: "Aesthetically, the well designed components are beatuiful and will undoubtely level up your next application.",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Joseph McFall",
+    role: "CTO at Google",
+    comment: "Efficient Collaborating",
+    body: "You have many examples that can be used to create a fast prototype for your team.",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Jenny",
+    role: "Googler at Google",
+    comment: "Nice work",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
