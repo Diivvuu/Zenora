@@ -37,62 +37,72 @@ export function SignupFormDemo() {
   ];
 
   return (
-    <div className="w-full mx-auto rounded-none md:rounded-2xl md:p-8 shadow-input ">
-      <h2 className="text-3xl text-text-white">Need any help?</h2>
-      <p className="body-font-size text-text-white">
-        Connect with us to get the help you need!
+    <div className="relative w-full mx-auto rounded-none md:rounded-2xl md:p-4 bg-[#1b1b1b] border-2 border-transparent bg-clip-padding">
+      <h2 className="text-4xl text-white text-center font-semibold">
+        Need any help?
+      </h2>
+      <p className="text-lg text-neutral-400 text-center mt-2">
+        We&apos;re here to assist you in any way we can.
       </p>
 
       <form
-        className="my-8 py-12 px-8 rounded-xl  bg-[#1a1a1a]"
+        className="my-8 py-10 px-6 rounded-xl bg-[#1b1b1b] relative"
         onSubmit={handleSubmit}
       >
-        {formFields.map((field, index) => (
-          <LabelInputContainer
-            key={field.id}
-            className={index !== formFields.length - 1 ? "mb-4" : "mb-8"}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-gray-400 via-gray-700 to-gray-400 rounded-xl opacity-20 blur-md"></div>
+        <div className="relative z-10">
+          {formFields.map((field, index) => (
+            <LabelInputContainer
+              key={field.id}
+              className={index !== formFields.length - 1 ? "mb-6" : "mb-8"}
+            >
+              <Label htmlFor={field.id} className="text-xl text-neutral-300">
+                {field.label}
+              </Label>
+              {field.id === "message" ? (
+                <textarea
+                  className="bg-neutral-800 text-white border-none outline-none py-3 px-4 resize-none rounded-md transition-all focus:ring-2 focus:ring-indigo-500 placeholder:text-neutral-500"
+                  id={field.id}
+                  placeholder={field.placeholder}
+                />
+              ) : (
+                <Input
+                  className="bg-neutral-800 text-white border-none py-3 px-4 rounded-md transition-all focus:ring-2 focus:ring-cyan-500 placeholder:text-neutral-500"
+                  id={field.id}
+                  placeholder={field.placeholder}
+                  type={field.type}
+                />
+              )}
+            </LabelInputContainer>
+          ))}
+
+          <button
+            className="bg-gradient-to-r from-gray-600 to-gray-900 w-full text-white rounded-md h-12 font-medium transition-all transform hover:scale-105 shadow-lg"
+            type="submit"
           >
-            <Label htmlFor={field.id} className="text-xl mx-2">
-              {field.label}
-            </Label>
-            {field.id === "message" ? (
-              <textarea
-                className="bg-[#0003] text-white h-40 border-none outline-none py-2 px-3 resize-none
-                placeholder:text-neutral-400 dark:placeholder-text-neutral-600"
-                id={field.id}
-                placeholder={field.placeholder}
-              />
-            ) : (
-              <Input
-                className="bg-[#0003] text-white border-none text-sm"
-                id={field.id}
-                placeholder={field.placeholder}
-                type={field.type}
-              />
-            )}
-          </LabelInputContainer>
-        ))}
-
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Send Note &rarr;
-          <BottomGradient />
-        </button>
-
+            Send Note &rarr;
+          </button>
+        </div>
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+
+        {/* <div className="flex justify-center gap-4">
+          <SocialLoginButton icon={<IconBrandGithub />} />
+          <SocialLoginButton icon={<IconBrandGoogle />} />
+          <SocialLoginButton icon={<IconBrandOnlyfans />} />
+        </div> */}
       </form>
+      <p className="text-base text-center text-neutral-400 mt-4">
+        We&apos;ll respond within 24 hours. Stay connected!
+      </p>
     </div>
   );
 }
 
-const BottomGradient = () => {
+const SocialLoginButton = ({ icon }: { icon: React.ReactNode }) => {
   return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-    </>
+    <button className="p-3 bg-neutral-800 rounded-full text-white transition-all transform hover:scale-110">
+      {icon}
+    </button>
   );
 };
 
