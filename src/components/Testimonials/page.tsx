@@ -65,7 +65,11 @@ const ReviewCard = ({
         achieve great work so when a solid brief is written, you can expect ”
       </blockquote>
       <div className="flex items-center mt-5">
-        <img src={img} alt="Author" className="w-20 h-20 rounded-full mr-4" />
+        <img
+          src=""
+          alt="Author"
+          className="bg-white w-20 h-20 rounded-full mr-4"
+        />
         <div>
           <p className="large-font-size highlighted-text-light">{name}</p>
           {/* <p className="small-font-size">{role}</p> */}

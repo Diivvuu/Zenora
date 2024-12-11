@@ -60,8 +60,8 @@ export default function Home() {
         }
       />
       <Roadmap data={timelineData} />
-      <Testimonials />
       <ParallaxSection />
+      <Testimonials />
       <ContactUs />
       <ButtonDemo />
       <Footer />

@@ -2,9 +2,11 @@ import React from "react";
 
 const ParallaxSection: React.FC = () => {
   return (
-    <div className="page-container">
+    <div className="section-mb">
       <div className="parallax-section">
-        <h2 className="secondary-heading">At your service</h2>
+        <h2 className="secondary-heading highlighted-text-light">
+          At your service
+        </h2>
       </div>
     </div>
   );

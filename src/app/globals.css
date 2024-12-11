@@ -70,11 +70,11 @@ body {
 }
 
 .tertiary-heading {
-  @apply text-2xl lg:text-3xl  font-semibold;
+  @apply text-3xl   font-semibold;
 }
 
 .subheading{
-  @apply lg:text-2xl text-[var(--color-light-gray)]
+  @apply text-2xl text-[var(--color-light-gray)]
 }
 
 .gradient {
@@ -102,11 +102,11 @@ body {
 
 .highlighted-text-light {
   color: var(--color-white);
-  text-shadow: 0px 0px 5px #ffffff80;
+  text-shadow: 0px 0px 6px #ffffff80;
 }
 
 .highlighted-text-dark {
-  color: var(--color-primary-500);
+  color: var(--color-primary-800);
 }
 @media (max-width: 1024px) {
   .hide-on-small {
@@ -115,7 +115,7 @@ body {
 }
 
 .parallax-section {
-  height: 100vh; /* Full viewport height */
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,11 +129,3 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-h1,
-h2 {
-  margin: 0;
-}
-
-p {
-  margin: 20px 0;
-}
