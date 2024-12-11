@@ -7,8 +7,12 @@ import { BackgroundBeams } from "../ui/background-beams";
 import { FocusCards } from "../ui/focus-cards";
 import { services } from "@/constants/data";
 
-const Hero = ({ scrollToContact }) => {
-  const container = useRef();
+interface HeroProps {
+  scrollToContact: () => void;
+}
+
+const Hero = ({ scrollToContact }: HeroProps) => {
+  const container = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end start"],
