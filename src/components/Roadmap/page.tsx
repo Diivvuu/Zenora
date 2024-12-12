@@ -34,7 +34,7 @@ function Roadmap({ data }: RoadmapProps) {
 
             {/* Title & Description */}
             {/* <div className="mt-4"> */}
-            <div className="absolute text-left left-6 lg:left-20 md:left-12 top-10 flex flex-col justify-center items-start text-xs md:text-lg w-full font-semibold text-gray-800">
+            <div className="absolute text-left left-6 lg:left-20 xl:left-32 md:left-12 top-10 flex flex-col justify-center items-start text-xs md:text-lg w-full font-semibold text-gray-800">
               <span className="text-xs md:text-sm text-gray-500">
                 STEP {index + 1}
               </span>
