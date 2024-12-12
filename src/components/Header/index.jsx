@@ -7,7 +7,7 @@ import Nav from "./nav/page";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "../../common/RoundedButton";
-import Magnetic from "../../common/Magnetic";
+// import Magnetic from "../../common/Magnetic";
 import Image from "next/image";
 
 export default function HeaderComponent() {
@@ -15,35 +15,52 @@ export default function HeaderComponent() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     if (isActive) setIsActive(false);
   }, [pathname]);
-
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 1024);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
   useLayoutEffect(() => {
     const isMobileOrTablet = window.innerWidth <= 1024;
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(button.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight / 2,
-        onLeave: () => {
-          gsap.to(button.current, {
-            scale: 1,
-            duration: 0.25,
-            ease: "power1.out",
-          });
+
+    if (!isMobileOrTablet) {
+      // Apply scroll-trigger behavior only for larger screens
+      gsap.to(button.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          start: 0,
+          end: window.innerHeight / 2,
+          onLeave: () => {
+            gsap.to(button.current, {
+              scale: 1,
+              duration: 0.25,
+              ease: "power1.out",
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(
+              button.current,
+              { scale: 0, duration: 0.25, ease: "power1.out" },
+              setIsActive(false)
+            );
+          },
         },
-        onEnterBack: () => {
-          gsap.to(
-            button.current,
-            { scale: 0, duration: 0.25, ease: "power1.out" },
-            setIsActive(false)
-          );
-        },
-      },
-    });
+      });
+    } else {
+      // Ensure the button is always visible on mobile or tablet
+      gsap.set(button.current, {
+        scale: 1, // Ensure it's fully visible
+      });
+    }
   }, []);
 
   return (

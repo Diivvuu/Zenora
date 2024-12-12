@@ -38,7 +38,9 @@ export function SignupFormDemo() {
 
   return (
     <div className="relative w-full mx-auto rounded-none md:rounded-2xl md:p-4 bg-[#1b1b1b] border-2 border-transparent bg-clip-padding">
-      <h2 className="tertiary-heading text-text-white">Need any help?</h2>
+      <h2 className="tertiary-heading text-center text-text-white">
+        Need any help?
+      </h2>
       <p className="text-lg text-neutral-400 text-center mt-2">
         We&apos;re here to assist you in any way we can.
       </p>

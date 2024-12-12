@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials/page";
 import Roadmap from "@/components/Roadmap/page";
 import ParallaxSection from "@/components/ui/parallexComponent";
 import ButtonDemo from "@/components/ui/kk";
+import { Mail } from "lucide-react";
 
 export default function Home() {
   const contactUsRef = useRef<HTMLDivElement>(null);
@@ -52,14 +53,17 @@ export default function Home() {
       >
         Button
       </Button> */}
-      <div className="bg-black text-white w-fit fixed bottom-20 right-20 z-10">
+      <div className="text-white w-fit fixed bottom-20 right-20 z-10">
         <div
           // className="absolute right-40 bottom-20 z-[99999999]"
           onClick={scrollToContact}
         >
-          <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-            Tap here
-          </button>
+          <div className="border-[3px] border-yellow-600 rounded-full p-3">
+            <Mail className="text-yellow-600" />
+          </div>
+          {/* <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"> */}
+          {/* Tap here */}
+          {/* </button> */}
         </div>
       </div>
       <HeaderComponent />
