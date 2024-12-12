@@ -1,9 +1,6 @@
 "use client";
 
-import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Preloader from "@/components/Preloader";
-import Button from "@/components/ui/button";
 import Hero from "@/components/landing/page";
 import Lenis from "lenis";
 import HeaderComponent from "@/components/Header";
@@ -39,6 +36,8 @@ export default function Home() {
       }, 2500);
     })();
   }, []);
+  const scrollToContact = () =>
+    contactUsRef.current?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div className="relative">
@@ -53,12 +52,18 @@ export default function Home() {
       >
         Button
       </Button> */}
+      <div className="bg-black text-white w-fit fixed bottom-20 right-20 z-10">
+        <div
+          // className="absolute right-40 bottom-20 z-[99999999]"
+          onClick={scrollToContact}
+        >
+          <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            Tap here
+          </button>
+        </div>
+      </div>
       <HeaderComponent />
-      <Hero
-        scrollToContact={() =>
-          contactUsRef.current.scrollIntoView({ behavior: "smooth" })
-        }
-      />
+      <Hero />
       <Roadmap data={timelineData} />
       <ParallaxSection />
       <Testimonials />

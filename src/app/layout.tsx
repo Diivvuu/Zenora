@@ -1,10 +1,7 @@
-import HeaderComponent from "@/components/Header";
 import type { Metadata } from "next";
-import { Nunito, Poppins, Inter } from "next/font/google";
+import { Nunito, Inter } from "next/font/google";
 // import Lora from "next/font/local";
 import "./globals.css";
-import RO from "locomotive-scroll/dist/types/core/RO.js";
-
 const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "700"],
