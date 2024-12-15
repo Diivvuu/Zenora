@@ -37,37 +37,42 @@ export function SignupFormDemo() {
   ];
 
   return (
-    <div className="relative w-full mx-auto rounded-none md:rounded-2xl md:p-4 bg-[#1b1b1b] border-2 border-transparent bg-clip-padding">
-      <h2 className="tertiary-heading text-center text-text-white">
-        Need any help?
-      </h2>
-      <p className="text-lg text-neutral-400 text-center mt-2">
-        We&apos;re here to assist you in any way we can.
-      </p>
-
+    <div className="relative w-full mx-auto rounded-2xl md:p-4 flex flex-col sm:flex-row md:flex-col">
+      <div className="flex flex-col justify-center">
+        <h2 className="tertiary-heading highlighted-text-light mb-2 ">
+          Need any help?
+        </h2>
+        <p className="subheading-light">
+          We&apos;re here to assist you in any way we can.
+        </p>
+      </div>
       <form
-        className="my-8 py-10 px-6 rounded-xl bg-[#1b1b1b] relative"
+        className="my-8 py-10 px-10 rounded-xl relative w-full"
         onSubmit={handleSubmit}
       >
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-gray-400 via-gray-700 to-gray-400 rounded-xl opacity-20 blur-md"></div>
+        <div className="custom-background absolute w-[40rem] h-[40rem] rounded-[15rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute inset-0 z-1 bg-[#333] rounded-xl "></div>
         <div className="relative z-10">
           {formFields.map((field, index) => (
             <LabelInputContainer
               key={field.id}
               className={index !== formFields.length - 1 ? "mb-6" : "mb-8"}
             >
-              <Label htmlFor={field.id} className="text-xl text-neutral-300">
+              <Label
+                htmlFor={field.id}
+                className="large-font-size highlighted-text-light mb-2"
+              >
                 {field.label}
               </Label>
               {field.id === "message" ? (
                 <textarea
-                  className="bg-neutral-800 text-white border-none outline-none py-3 px-4 resize-none rounded-md transition-all focus:ring-2 focus:ring-indigo-500 placeholder:text-neutral-500"
+                  className="p-[2rem] bg-neutral-800 text-white border-none outline-none  resize-none rounded-md transition-all focus:ring-2 focus:ring-indigo-500 body-font-size placeholder:body-font-size placeholder:text-neutral-500"
                   id={field.id}
                   placeholder={field.placeholder}
                 />
               ) : (
                 <Input
-                  className="bg-neutral-800 text-white border-none py-3 px-4 rounded-md transition-all focus:ring-2 focus:ring-cyan-500 placeholder:text-neutral-500"
+                  className="p-[2rem] bg-neutral-800 text-white border-none rounded-md transition-all focus:ring-2 focus:ring-cyan-500 placeholder:text-neutral-500 body-font-size placeholder:body-font-size"
                   id={field.id}
                   placeholder={field.placeholder}
                   type={field.type}
@@ -77,23 +82,14 @@ export function SignupFormDemo() {
           ))}
 
           <button
-            className="bg-gradient-to-r from-gray-600 to-gray-900 w-full text-white rounded-md h-12 font-medium transition-all transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-gray-600 to-gray-900 w-full rounded-md h-12 font-medium transition-all transform hover:scale-105 shadow-lg body-font-size text-text-white"
             type="submit"
           >
-            Send Note &rarr;
+            Submit
           </button>
         </div>
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-
-        {/* <div className="flex justify-center gap-4">
-          <SocialLoginButton icon={<IconBrandGithub />} />
-          <SocialLoginButton icon={<IconBrandGoogle />} />
-          <SocialLoginButton icon={<IconBrandOnlyfans />} />
-        </div> */}
       </form>
-      <p className="text-base text-center text-neutral-400 mt-4">
-        We&apos;ll respond within 24 hours. Stay connected!
-      </p>
     </div>
   );
 }

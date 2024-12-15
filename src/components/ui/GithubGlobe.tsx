@@ -10,14 +10,14 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
 export function GlobeDemo() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#0a3694",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
+    polygonColor: "rgba(255,255,255,1)",
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
@@ -30,7 +30,7 @@ export function GlobeDemo() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#fff", "#e5f8f7", "#99dfde"];
   const sampleArcs = [
     {
       order: 1,
@@ -395,7 +395,7 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-[#1b1b1b] bg-[#1b1b1b] relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
@@ -410,16 +410,8 @@ export function GlobeDemo() {
             duration: 1,
           }}
           className="div"
-        >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-[#1b1b1b] dark:text-white">
-            We sell soap worldwide
-          </h2>
-          <p className="text-center text-base md:text-lg font-normal text-[#1b1b1b] dark:text-neutral-200 max-w-md mt-2 mx-auto">
-            This globe is interactive and customizable. Have fun with it, and
-            don&apos;t forget to share it. :)
-          </p>
-        </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-[#1b1b1b] to-[#1b1b1b] z-40" />
+        ></motion.div>
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 pointer-events-none select-none from-transparent = z-40" />
         <div className="absolute w-full bottom-0 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>

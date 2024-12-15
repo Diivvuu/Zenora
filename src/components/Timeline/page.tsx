@@ -8,7 +8,7 @@ const Timeline: React.FC<TimelineProps> = ({ data }) => {
   return (
     <div
       id="section-timeline"
-      className="section-padding flex md:flex-col h-[60vh] md:h-[50vh] justify-between md:justify-start"
+      className="section-padding flex md:flex-col h-[50vh] md:h-[40vh] justify-between md:justify-start"
     >
       <div className=" mb-[4rem] text-center flex flex-col justify-center">
         <h2 className="tertiary-heading highlighted-text-dark text-left md:text-center">
