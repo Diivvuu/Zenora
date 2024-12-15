@@ -53,17 +53,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {item.title}
                 </h3>
               </div>
-
-              <div className="relative pl-20 pr-4 md:pl-4 w-[60%]">
-                <p className="body-font-size">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  aliquam eum quas eveniet fugit a, error ut facere adipisci
-                  harum nulla, voluptatibus quos eos laboriosam perspiciatis
-                  architecto itaque commodi! Accusamus eligendi quasi dolores
-                  magnam incidunt rerum non alias ipsum ullam illum qui, culpa
-                  porro minus?
-                </p>
-              </div>
             </div>
           ))}
           <div

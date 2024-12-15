@@ -7,10 +7,10 @@ import Footer from "@/components/Footer/page";
 import { timelineData } from "@/constants/data";
 import ContactUs from "@/components/Contact/page";
 import Testimonials from "@/components/Testimonials/page";
-import Roadmap from "@/components/Roadmap/page";
 import ParallaxSection from "@/components/ui/parallexComponent";
 import Navigation from "@/components/Header/page";
 import ScrollToContactButton from "@/components/Contact/scrollToContactButton";
+import Timeline from "@/components/Timeline/page";
 
 export default function Home() {
   const contactUsRef = useRef<HTMLDivElement>(null);
@@ -44,7 +44,7 @@ export default function Home() {
       <ScrollToContactButton />
       <Navigation />
       <Hero />
-      <Roadmap data={timelineData} />
+      <Timeline data={timelineData} />
       <ParallaxSection />
       <Testimonials />
       <ContactUs />

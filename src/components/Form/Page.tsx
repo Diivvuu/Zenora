@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <form action="/submit" method="POST">
       <Label />
-      <input
+      <Input
         type="text"
         id="username"
         name="username"
@@ -14,7 +14,7 @@ const Page = () => {
       />
 
       <label for="email">Email:</label>
-      <input
+      <Input
         type="email"
         id="email"
         name="email"
@@ -23,7 +23,7 @@ const Page = () => {
       />
 
       <label for="password">Password:</label>
-      <input
+      <Input
         type="password"
         id="password"
         name="password"

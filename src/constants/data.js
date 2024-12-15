@@ -24,115 +24,23 @@ export const services = [
 export const timelineData = [
   {
     title: "Diagnosis",
-    content: "",
-    src: "",
   },
   {
     title: "Decision",
-    content: "",
-    src: "",
   },
   {
     title: "Treatment planning",
-    content: "",
-    src: "",
   },
   {
     title: "Arrival",
-    content: "",
-    src: "",
   },
   {
     title: "Treatment",
-    content: "",
-    src: "",
   },
   {
     title: "Recovery",
-    content: "",
-    src: "",
   },
   {
     title: "After care",
-    content: "",
-    src: "",
-  },
-];
-
-export const products = [
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/1.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/2.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/3.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/4.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/5.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/1.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/2.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/3.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/4.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/5.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/1.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/2.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/3.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/4.jpg",
-  },
-  {
-    title: "",
-    link: "",
-    thumbnail: "/images/5.jpg",
   },
 ];

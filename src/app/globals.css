@@ -29,11 +29,11 @@ body {
 }
 
 .section-padding {
-  @apply px-[4rem] md:px-[8rem] lg:px-[12rem] 2xl:px-[24rem] 2xl:py-[10rem];
+  @apply px-[4rem] py-[2rem] md:px-[8rem] md:py-[6rem] lg:px-[10rem] lg:py-[8rem] 2xl:px-[24rem] 2xl:py-[10rem];
 }
 
 .section-padding-sm {
-  @apply px-[4rem] md:px-[8rem] lg:px-[12rem] 2xl:px-[24rem];
+  @apply px-[4rem] md:px-[8rem] lg:px-[10rem] 2xl:px-[24rem];
 }
 
 .section-mb{
@@ -45,15 +45,15 @@ body {
 }
 
 .body-font-size {
-  @apply text-xl;
+  @apply text-lg lg:text-xl;
 }
 
 .small-font-size {
-  @apply text-lg;
+  @apply text-md lg:text-lg;
 }
 
 .large-font-size {
-  @apply text-2xl;
+  @apply text-xl lg:text-2xl;
 }
 
 .primary-btn {
