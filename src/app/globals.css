@@ -41,7 +41,7 @@ body {
 }
 
 .card-padding {
-  @apply lg:px-[3rem] lg:py-[2rem];
+  @apply px-[1rem] py-[1rem] lg:px-[3rem] lg:py-[2rem];
 }
 
 .body-font-size {
