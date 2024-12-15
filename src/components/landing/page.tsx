@@ -21,7 +21,7 @@ const Hero = () => {
           <BackgroundBeams />
           <div className="z-10 mb-[12rem] relative px-4 w-full  left-0 top-0 section-padding h-[70vh] flex flex-col justify-center">
             <div className="mb-[5rem]">
-              <h1 className="primary-heading">
+              <h1 className="primary-heading highlighted-text-light">
                 Welcome to <br />
                 Zenora
               </h1>
@@ -34,7 +34,6 @@ const Hero = () => {
             </div>
           </div>
         </AuroraBackground>
-        {/* <HeroParallax products={products} /> */}
       </motion.div>
     </div>
   );
