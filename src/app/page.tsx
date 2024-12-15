@@ -3,16 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import Hero from "@/components/landing/page";
 import Lenis from "lenis";
-// import HeaderComponent from "@/components/Header";
 import Footer from "@/components/Footer/page";
 import { timelineData } from "@/constants/data";
 import ContactUs from "@/components/Contact/page";
 import Testimonials from "@/components/Testimonials/page";
 import Roadmap from "@/components/Roadmap/page";
 import ParallaxSection from "@/components/ui/parallexComponent";
-import ButtonDemo from "@/components/ui/kk";
-import { Mail } from "lucide-react";
 import Navigation from "@/components/Header/page";
+import ScrollToContactButton from "@/components/Contact/scrollToContactButton";
 
 export default function Home() {
   const contactUsRef = useRef<HTMLDivElement>(null);
@@ -42,39 +40,15 @@ export default function Home() {
     contactUsRef.current?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="relative">
-      {/* <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
-      </AnimatePresence> */}
-      {/* 
-      <Button
-        variant="secondary"
-        state="hover"
-        className="absolute top-[100%] left-[90%]S"
-      >
-        Button
-      </Button> */}
-      <div className="text-white w-fit fixed bottom-20 right-20 z-10">
-        <div
-          // className="absolute right-40 bottom-20 z-[99999999]"
-          onClick={scrollToContact}
-        >
-          <div className="border-[3px] border-yellow-600 rounded-full p-3">
-            <Mail className="text-yellow-600" />
-          </div>
-          {/* <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"> */}
-          {/* Tap here */}
-          {/* </button> */}
-        </div>
-      </div>
+    <>
+      <ScrollToContactButton />
       <Navigation />
       <Hero />
       <Roadmap data={timelineData} />
       <ParallaxSection />
       <Testimonials />
       <ContactUs />
-      <ButtonDemo />
       <Footer />
-    </div>
+    </>
   );
 }

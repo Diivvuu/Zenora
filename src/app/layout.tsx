@@ -27,7 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${nunito.variable} ${inter.variable} antialiased`}>
-        {/* <HeaderComponent /> */}
         {children}
       </body>
     </html>

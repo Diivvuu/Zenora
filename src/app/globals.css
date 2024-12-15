@@ -33,7 +33,7 @@ body {
 }
 
 .section-padding-sm {
-  @apply lg:px-[12rem] 2xl:px-[24rem] 2xl:py-[1rem];
+  @apply px-[4rem] md:px-[8rem] lg:px-[12rem] 2xl:px-[24rem];
 }
 
 .section-mb{
