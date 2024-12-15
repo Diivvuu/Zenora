@@ -56,22 +56,21 @@ const ReviewCard = ({
   body: string;
 }) => {
   return (
-    <div className="gradient-2 rounded-lg card-padding w-[40rem] ">
-      <blockquote className="body-font-size text-text-white">
-        “Ernest has the{" "}
-        <span className="highlighted-text-light font-bold">‘IT’ factor</span>{" "}
-        when it comes to design. His skillset translates across traditional
-        design to web and even motion graphics. He needs little direction to
-        achieve great work so when a solid brief is written, you can expect ”
+    <div className="border-2 rounded-lg card-padding w-[40rem] ">
+      <blockquote className="body-font-size">
+        “Ernest has the when it comes to design. His skillset translates across
+        traditional design to web and even motion graphics. He needs little
+        direction to achieve great work so when a solid brief is written, you
+        can expect ”
       </blockquote>
       <div className="flex items-center mt-5">
         <img
-          src=""
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYuBVY7REViir2mWv1_fo79Q3PIRL0mZ1wQ&s"
           alt="Author"
           className="bg-white w-20 h-20 rounded-full mr-4"
         />
         <div>
-          <p className="large-font-size highlighted-text-light">{name}</p>
+          <p className="large-font-size highlighted-text-dark">{name}</p>
           {/* <p className="small-font-size">{role}</p> */}
         </div>
       </div>
@@ -98,8 +97,8 @@ const Testimonials = () => {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee> */}
-      {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div> */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
     </div>
   );
 };

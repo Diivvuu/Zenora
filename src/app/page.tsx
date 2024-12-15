@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Hero from "@/components/landing/page";
 import Lenis from "lenis";
-import HeaderComponent from "@/components/Header";
+// import HeaderComponent from "@/components/Header";
 import Footer from "@/components/Footer/page";
 import { timelineData } from "@/constants/data";
 import ContactUs from "@/components/Contact/page";
@@ -12,6 +12,7 @@ import Roadmap from "@/components/Roadmap/page";
 import ParallaxSection from "@/components/ui/parallexComponent";
 import ButtonDemo from "@/components/ui/kk";
 import { Mail } from "lucide-react";
+import Navigation from "@/components/Header/page";
 
 export default function Home() {
   const contactUsRef = useRef<HTMLDivElement>(null);
@@ -66,7 +67,7 @@ export default function Home() {
           {/* </button> */}
         </div>
       </div>
-      <HeaderComponent />
+      <Navigation />
       <Hero />
       <Roadmap data={timelineData} />
       <ParallaxSection />
