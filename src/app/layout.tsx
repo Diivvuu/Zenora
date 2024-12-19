@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Nunito, Inter } from "next/font/google";
+import { Nunito, Inter, Arial } from "next/font/google";
+
 // import Lora from "next/font/local";
 import "./globals.css";
 const nunito = Nunito({

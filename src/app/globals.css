@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ArialRoundedMTBold';
+  src: url('/fonts/ArialRoundedMTBold.ttf') format('truetype');
+  font-weight: normal; /* Adjust if necessary */
+  font-style: normal;  /* Adjust if necessary */
+}
+
 :root {
   --color-primary-50: #e5f8f7;
   --color-primary-100: #cceff0;
@@ -24,8 +31,10 @@ html {
   font-size: 10px; /* Changes root font size */
 }
 
+
+
 body {
-  @apply font-inter;
+  font-family: 'ArialRoundedMTBold', Arial, sans-serif;
 }
 
 .section-padding {
