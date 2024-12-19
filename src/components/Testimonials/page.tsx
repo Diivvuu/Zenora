@@ -57,7 +57,7 @@ const ReviewCard = ({
 }) => {
   return (
     <div className="border-2 rounded-lg card-padding w-[40rem] ">
-      <blockquote className="body-font-size">
+      <blockquote className="body-font-size text-gray">
         “Ernest has the when it comes to design. His skillset translates across
         traditional design to web and even motion graphics. He needs little
         direction to achieve great work so when a solid brief is written, you

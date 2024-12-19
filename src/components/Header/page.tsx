@@ -8,8 +8,8 @@ const Navigation: React.FC = () => {
   // Define menu items
   const menuItems = [
     { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="mt-[1rem] fixed top-0 w-full z-50">
+    <div className="mt-[2rem] fixed top-0 w-full z-50">
       {/* Overlay blur */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40"></div>
@@ -64,11 +64,13 @@ const Navigation: React.FC = () => {
             isScrolled ? "bg-black bg-opacity-40" : "bg-transparent"
           }`}
         >
-          <div className="flex items-center justify-between h-16 relative z-50">
+          <div className="flex items-center justify-between h-20 md:h-24 relative z-50">
             {/* Logo */}
-            <a href="#" className="text-white text-2xl font-bold">
-              Logo
-            </a>
+            <div className="basis-[20%] xs:basis-[14%] sm:basis-[12%] md:basis-[10%] lg:basis-[7%] 2xl:basis-[6%]">
+              <a href="#home">
+                <img src="/logo.png" alt="" />
+              </a>
+            </div>
 
             {/* Hamburger Menu */}
             <button
