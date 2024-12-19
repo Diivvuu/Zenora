@@ -1,26 +1,24 @@
 export const services = [
   {
-    index: 1,
+    index: 0,
     title: "Medical Tourism",
     description:
       "Lorem ipsum dolor sit amet, consectetur adispisicing elit. Optio, aut?",
     src: "rock.jpg",
     link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
 
-    color: "#BBACAF",
-    src: "/images/1.jpg",
+    src: "/images/medical.jpg",
   },
 
   {
-    index: 2,
+    index: 1,
     title: "Wellness Tourism",
     description:
       "Lorem ipsum dolor sit amet, consectetur adispisicing elit. Optio, aut?",
-    src: "tree.jpg",
-    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
-    src: "/images/2.jpg",
+    src: "/images/wellness.jpg",
   },
 ];
+
 export const timelineData = [
   {
     title: "Diagnosis",
