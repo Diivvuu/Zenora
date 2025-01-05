@@ -1,18 +1,19 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
-import Hero from "@/components/landing/page";
 import Lenis from "lenis";
-import Footer from "@/components/Footer/page";
 import { timelineData } from "@/constants/data";
-import ContactUs from "@/components/Contact/page";
-import Testimonials from "@/components/Testimonials/page";
 import ParallaxSection from "@/components/ui/parallexComponent";
-import Navigation from "@/components/Header/page";
-import ScrollToContactButton from "@/components/Contact/scrollToContactButton";
-import Timeline from "@/components/Timeline/page";
+import ScrollToContactButton from "@/components/sections/Contact/scrollToContactButton";
 import { AnimatePresence } from "framer-motion";
-import PreLoader from "@/components/Preloader";
+import {
+  Hero,
+  Contact,
+  Footer,
+  Navigation,
+  Testimonials,
+  Timeline,
+  Preloader,
+} from "@/components";
 
 export default function Home() {
   const contactUsRef = useRef<HTMLDivElement>(null);
@@ -51,7 +52,7 @@ export default function Home() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && <PreLoader />}
+        {isLoading && <Preloader />}
       </AnimatePresence>
       <ScrollToContactButton />
       <Navigation />
@@ -59,7 +60,7 @@ export default function Home() {
       <Timeline data={timelineData} />
       <ParallaxSection />
       <Testimonials />
-      <ContactUs />
+      <Contact />
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import { SignupFormDemo } from "../ui/SignUpForm";
-import { GlobeDemo } from "../ui/GithubGlobe";
+import { SignupFormDemo } from "../../ui/SignUpForm";
+import { GlobeDemo } from "../../ui/GithubGlobe";
 
 function ContactUs() {
   return (

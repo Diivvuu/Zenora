@@ -1,10 +1,11 @@
+"use client";
 import React, { useRef } from "react";
-// import LeadForm from "./LeadForm";
+
 import { useScroll, useTransform, motion } from "framer-motion";
-import { AuroraBackground } from "../ui/aurora-background";
-import SearchBar from "../ui/searchBar";
-import { BackgroundBeams } from "../ui/background-beams";
-import { FocusCards } from "../ui/focus-cards";
+import { AuroraBackground } from "../../ui/aurora-background";
+import SearchBar from "../../ui/searchBar";
+import { BackgroundBeams } from "../../ui/background-beams";
+import { FocusCards } from "../../ui/focus-cards";
 import { services } from "@/constants/data";
 
 const Hero = () => {
@@ -15,7 +16,7 @@ const Hero = () => {
   });
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
   return (
-    <div className="h-screen overflow-hidden">
+    <section id="section-hero" className="">
       <motion.div className="reltive h-full" style={{ y }}>
         <AuroraBackground showRadialGradient={true}>
           <BackgroundBeams />
@@ -38,7 +39,7 @@ const Hero = () => {
           </div>
         </AuroraBackground>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
